@@ -78,12 +78,6 @@
         return;
     }
     
-    // judge
-    if (![password isEqualToString:@"xxwu"]) {
-        [ZCPToastUtil showToast:@"密码不正确！"];
-        return;
-    }
-    
     NSString *url = [NSString stringWithFormat:@"%@&secret=%@", self.url, password];
     
     // jump

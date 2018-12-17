@@ -35,23 +35,4 @@
     return navigationController;
 }
 
-
-/// 根据一组id生成一组vc对象
-- (NSArray *)generateVCsWithIdentifiers:(NSArray *)identifiers {
-    NSMutableArray *vcs             = [NSMutableArray arrayWithCapacity:5];
-    for (int i = 0; i < identifiers.count; i++) {
-        if (i > 5) {
-            break;
-        }
-        NSString *vcIdentifier      = [identifiers objectAtIndex:i];
-        ZCPVCDataModel *vcDataModel = [[ZCPControllerFactory sharedInstance] generateVCModelWithIdentifier:vcIdentifier];
-        UIViewController *vc        = [[ZCPControllerFactory sharedInstance] generateVCWithVCModel:vcDataModel];
-        if (vc && [vc isKindOfClass:[UIViewController class]]) {
-            [[ZCPControllerFactory sharedInstance] configController:vc withVCDataModel:vcDataModel shouldCallInitMethod:YES];
-            [vcs addObject:vc];
-        }
-    }
-    return vcs;
-}
-
 @end

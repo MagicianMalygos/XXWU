@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //  监听推送通知，收到了就放音乐
 }
 
 - (void)viewWillAppear:(BOOL)animated {

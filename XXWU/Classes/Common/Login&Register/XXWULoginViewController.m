@@ -88,6 +88,14 @@
     
     // jump
     openURL(url);
+    for (UIViewController *vc in self.navigationController.viewControllers) {
+        if (vc == self) {
+            NSMutableArray *newVCs = self.navigationController.viewControllers.mutableCopy;
+            [newVCs removeObject:vc];
+            self.navigationController.viewControllers = newVCs;
+            break;
+        }
+    }
 }
 
 #pragma mark - getters and setters

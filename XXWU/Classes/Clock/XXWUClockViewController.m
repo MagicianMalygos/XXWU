@@ -14,8 +14,19 @@
 
 @implementation XXWUClockViewController
 
+#pragma mark - life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.title = @"闹钟管理";
+}
+
+#pragma mark - getters and setters
+
+
 
 @end

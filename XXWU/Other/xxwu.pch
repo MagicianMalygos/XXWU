@@ -1,0 +1,30 @@
+//
+//  xxwu.pch
+//  XXWU
+//
+//  Created by 朱超鹏 on 2017/8/23.
+//  Copyright © 2017年 zcp. All rights reserved.
+//
+
+#ifndef xxwu_pch
+#define xxwu_pch
+
+#import <ZCPKit.h>
+#import <AFNetworking.h>
+#import <YYModel.h>
+
+#import "XXWUViewMap.h"
+#import "ZCPControllerFactory+Category.h"
+#import "XXWUSettingsManager.h"
+#import "DebugManager.h"
+
+// 屏幕宽度
+#define SCREENWIDTH                                 [[UIScreen mainScreen] bounds].size.width
+//屏幕高度
+#define SCREENHEIGHT                                [[UIScreen mainScreen] bounds].size.height
+
+static inline CGFloat CGPointGetDistanceToPoint(CGPoint p1, CGPoint p2) {
+    return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
+}
+
+#endif /* xxwu_pch */

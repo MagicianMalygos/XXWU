@@ -7,50 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB960D1B1F4D142C00D9E4D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D1A1F4D142C00D9E4D3 /* AppDelegate.m */; };
-		FB960D231F4D142C00D9E4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB960D221F4D142C00D9E4D3 /* Assets.xcassets */; };
-		FB960D261F4D142C00D9E4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB960D241F4D142C00D9E4D3 /* LaunchScreen.storyboard */; };
-		FB960D291F4D142C00D9E4D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D281F4D142C00D9E4D3 /* main.m */; };
-		FB960D421F4D25A500D9E4D3 /* UIView+MGEasyFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D391F4D25A500D9E4D3 /* UIView+MGEasyFrame.m */; };
-		FB960D431F4D25A500D9E4D3 /* ZCPIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D3B1F4D25A500D9E4D3 /* ZCPIndicator.m */; };
-		FB960D451F4D25A500D9E4D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D3F1F4D25A500D9E4D3 /* ViewController.m */; };
-		FB960D461F4D25A500D9E4D3 /* ZCPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB960D411F4D25A500D9E4D3 /* ZCPWebViewController.m */; };
-		FBCF2EF11F4D2BBB003BDAB7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBCF2EF01F4D2BBB003BDAB7 /* Settings.bundle */; };
-		FBEF67DB1F4D2EA600C1DB44 /* ZCPSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEF67DA1F4D2EA600C1DB44 /* ZCPSettingsManager.m */; };
-		FBEF67E61F4D306B00C1DB44 /* DebugConsoleLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEF67E01F4D306B00C1DB44 /* DebugConsoleLogView.m */; };
-		FBEF67E71F4D306B00C1DB44 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEF67E21F4D306B00C1DB44 /* DebugManager.m */; };
-		FBEF67E81F4D306B00C1DB44 /* DebugStatusBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEF67E41F4D306B00C1DB44 /* DebugStatusBallView.m */; };
-		FBEF67E91F4D306B00C1DB44 /* DebugStatusBallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBEF67E51F4D306B00C1DB44 /* DebugStatusBallView.xib */; };
+		05C359C4DF8B396996042BB0 /* libPods-XXWU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E630100AEBDF44B0D77239E /* libPods-XXWU.a */; };
+		65646FA021C752BB00F0F945 /* DebugConsoleLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */; };
+		65646FA121C752BB00F0F945 /* DebugStatusBallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */; };
+		65646FA221C752BB00F0F945 /* DebugStatusBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */; };
+		65646FA321C752BB00F0F945 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8D21C752BB00F0F945 /* DebugManager.m */; };
+		65646FA521C752BB00F0F945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F9021C752BB00F0F945 /* ViewController.m */; };
+		65646FA721C752BB00F0F945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F9421C752BB00F0F945 /* AppDelegate.m */; };
+		65646FA821C752BB00F0F945 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65646F9721C752BB00F0F945 /* Settings.bundle */; };
+		65646FA921C752BB00F0F945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65646F9921C752BB00F0F945 /* Assets.xcassets */; };
+		65646FAA21C752BB00F0F945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65646F9A21C752BB00F0F945 /* LaunchScreen.storyboard */; };
+		65646FAB21C752BB00F0F945 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F9C21C752BB00F0F945 /* main.m */; };
+		65646FD321C7633000F0F945 /* XXWUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FC521C7633000F0F945 /* XXWUWebViewController.m */; };
+		65646FDB21C7634400F0F945 /* XXWUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FDA21C7634400F0F945 /* XXWUHomeViewController.m */; };
+		65646FE321C76B6F00F0F945 /* XXWUSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FE221C76B6F00F0F945 /* XXWUSettingsManager.m */; };
+		65646FEA21C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FE921C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m */; };
+		65646FF021C77CAA00F0F945 /* XXWUClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FEF21C77CAA00F0F945 /* XXWUClockViewController.m */; };
+		65646FF321C782E600F0F945 /* XXWUDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FF221C782E600F0F945 /* XXWUDebugViewController.m */; };
+		6564700021C786B200F0F945 /* xxwuViewMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65646FFB21C786B100F0F945 /* xxwuViewMap.plist */; };
+		6564700221C786B200F0F945 /* ZCPControllerFactory+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FFD21C786B100F0F945 /* ZCPControllerFactory+Category.m */; };
+		6564700321C786B200F0F945 /* ZCPServiceHandler+XXWU.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646FFE21C786B100F0F945 /* ZCPServiceHandler+XXWU.m */; };
+		6564700821C78DFD00F0F945 /* XXWULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6564700721C78DFD00F0F945 /* XXWULoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65646F8221C752BB00F0F945 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65646F8721C752BB00F0F945 /* DebugStatusBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugStatusBallView.h; sourceTree = "<group>"; };
+		65646F8821C752BB00F0F945 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
+		65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugConsoleLogView.m; sourceTree = "<group>"; };
+		65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugStatusBallView.xib; sourceTree = "<group>"; };
+		65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugStatusBallView.m; sourceTree = "<group>"; };
+		65646F8C21C752BB00F0F945 /* DebugConsoleLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugConsoleLogView.h; sourceTree = "<group>"; };
+		65646F8D21C752BB00F0F945 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
+		65646F9021C752BB00F0F945 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65646F9421C752BB00F0F945 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65646F9521C752BB00F0F945 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		65646F9721C752BB00F0F945 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		65646F9821C752BB00F0F945 /* xxwu.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xxwu.pch; sourceTree = "<group>"; };
+		65646F9921C752BB00F0F945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65646F9B21C752BB00F0F945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65646F9C21C752BB00F0F945 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65646FAF21C7533300F0F945 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65646FC421C7633000F0F945 /* XXWUWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXWUWebViewController.h; sourceTree = "<group>"; };
+		65646FC521C7633000F0F945 /* XXWUWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXWUWebViewController.m; sourceTree = "<group>"; };
+		65646FD921C7634400F0F945 /* XXWUHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeViewController.h; sourceTree = "<group>"; };
+		65646FDA21C7634400F0F945 /* XXWUHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUHomeViewController.m; sourceTree = "<group>"; };
+		65646FE121C76B6F00F0F945 /* XXWUSettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUSettingsManager.h; sourceTree = "<group>"; };
+		65646FE221C76B6F00F0F945 /* XXWUSettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUSettingsManager.m; sourceTree = "<group>"; };
+		65646FE821C7766300F0F945 /* XXWUHomeMainEntranceDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeMainEntranceDataModel.h; sourceTree = "<group>"; };
+		65646FE921C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUHomeMainEntranceDataModel.m; sourceTree = "<group>"; };
+		65646FEE21C77CAA00F0F945 /* XXWUClockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUClockViewController.h; sourceTree = "<group>"; };
+		65646FEF21C77CAA00F0F945 /* XXWUClockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUClockViewController.m; sourceTree = "<group>"; };
+		65646FF121C782E600F0F945 /* XXWUDebugViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUDebugViewController.h; sourceTree = "<group>"; };
+		65646FF221C782E600F0F945 /* XXWUDebugViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUDebugViewController.m; sourceTree = "<group>"; };
+		65646FF821C786B100F0F945 /* ZCPControllerFactory+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZCPControllerFactory+Category.h"; sourceTree = "<group>"; };
+		65646FF921C786B100F0F945 /* XXWUViewMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXWUViewMap.h; sourceTree = "<group>"; };
+		65646FFA21C786B100F0F945 /* ZCPServiceHandler+XXWU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZCPServiceHandler+XXWU.h"; sourceTree = "<group>"; };
+		65646FFB21C786B100F0F945 /* xxwuViewMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xxwuViewMap.plist; sourceTree = "<group>"; };
+		65646FFD21C786B100F0F945 /* ZCPControllerFactory+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZCPControllerFactory+Category.m"; sourceTree = "<group>"; };
+		65646FFE21C786B100F0F945 /* ZCPServiceHandler+XXWU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZCPServiceHandler+XXWU.m"; sourceTree = "<group>"; };
+		6564700621C78DFD00F0F945 /* XXWULoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWULoginViewController.h; sourceTree = "<group>"; };
+		6564700721C78DFD00F0F945 /* XXWULoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWULoginViewController.m; sourceTree = "<group>"; };
+		75B6AAF85DBAB817D3663664 /* Pods-XXWU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXWU.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXWU/Pods-XXWU.release.xcconfig"; sourceTree = "<group>"; };
+		8E630100AEBDF44B0D77239E /* libPods-XXWU.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXWU.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DDE003E5280A99FE40EC39 /* Pods-XXWU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXWU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXWU/Pods-XXWU.debug.xcconfig"; sourceTree = "<group>"; };
 		FB960D161F4D142C00D9E4D3 /* XXWU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXWU.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB960D191F4D142C00D9E4D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FB960D1A1F4D142C00D9E4D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FB960D221F4D142C00D9E4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FB960D251F4D142C00D9E4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FB960D271F4D142C00D9E4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB960D281F4D142C00D9E4D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FB960D351F4D1E0900D9E4D3 /* xxwu.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xxwu.pch; sourceTree = "<group>"; };
-		FB960D381F4D25A500D9E4D3 /* UIView+MGEasyFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGEasyFrame.h"; sourceTree = "<group>"; };
-		FB960D391F4D25A500D9E4D3 /* UIView+MGEasyFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGEasyFrame.m"; sourceTree = "<group>"; };
-		FB960D3A1F4D25A500D9E4D3 /* ZCPIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPIndicator.h; sourceTree = "<group>"; };
-		FB960D3B1F4D25A500D9E4D3 /* ZCPIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPIndicator.m; sourceTree = "<group>"; };
-		FB960D3E1F4D25A500D9E4D3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FB960D3F1F4D25A500D9E4D3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FB960D401F4D25A500D9E4D3 /* ZCPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPWebViewController.h; sourceTree = "<group>"; };
-		FB960D411F4D25A500D9E4D3 /* ZCPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPWebViewController.m; sourceTree = "<group>"; };
-		FB960D481F4D295C00D9E4D3 /* ZCPSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPSingleton.h; sourceTree = "<group>"; };
-		FBCF2EF01F4D2BBB003BDAB7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		FBEF67D91F4D2EA600C1DB44 /* ZCPSettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPSettingsManager.h; sourceTree = "<group>"; };
-		FBEF67DA1F4D2EA600C1DB44 /* ZCPSettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPSettingsManager.m; sourceTree = "<group>"; };
-		FBEF67DF1F4D306B00C1DB44 /* DebugConsoleLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugConsoleLogView.h; sourceTree = "<group>"; };
-		FBEF67E01F4D306B00C1DB44 /* DebugConsoleLogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugConsoleLogView.m; sourceTree = "<group>"; };
-		FBEF67E11F4D306B00C1DB44 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
-		FBEF67E21F4D306B00C1DB44 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
-		FBEF67E31F4D306B00C1DB44 /* DebugStatusBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugStatusBallView.h; sourceTree = "<group>"; };
-		FBEF67E41F4D306B00C1DB44 /* DebugStatusBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugStatusBallView.m; sourceTree = "<group>"; };
-		FBEF67E51F4D306B00C1DB44 /* DebugStatusBallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugStatusBallView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +79,176 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C359C4DF8B396996042BB0 /* libPods-XXWU.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004A9C8F4234543B1997B279 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4DDE003E5280A99FE40EC39 /* Pods-XXWU.debug.xcconfig */,
+				75B6AAF85DBAB817D3663664 /* Pods-XXWU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2DDA8282EA1937632D7C7793 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E630100AEBDF44B0D77239E /* libPods-XXWU.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65646F7F21C752BB00F0F945 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65646FF721C786B100F0F945 /* ZCPRouter */,
+				6564700421C78DEF00F0F945 /* Common */,
+				65646F8321C752BB00F0F945 /* Util */,
+				65646FC621C7633000F0F945 /* Base */,
+				65646FD221C7633000F0F945 /* Home */,
+				65646FC321C7633000F0F945 /* Web */,
+				65646FED21C77C9000F0F945 /* Clock */,
+				65646F8221C752BB00F0F945 /* AppDelegate.h */,
+				65646F9421C752BB00F0F945 /* AppDelegate.m */,
+				65646F9521C752BB00F0F945 /* ViewController.h */,
+				65646F9021C752BB00F0F945 /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		65646F8321C752BB00F0F945 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				65646F8621C752BB00F0F945 /* 调试工具 */,
+				65646FF121C782E600F0F945 /* XXWUDebugViewController.h */,
+				65646FF221C782E600F0F945 /* XXWUDebugViewController.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		65646F8621C752BB00F0F945 /* 调试工具 */ = {
+			isa = PBXGroup;
+			children = (
+				65646F8721C752BB00F0F945 /* DebugStatusBallView.h */,
+				65646F8821C752BB00F0F945 /* DebugManager.h */,
+				65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */,
+				65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */,
+				65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */,
+				65646F8C21C752BB00F0F945 /* DebugConsoleLogView.h */,
+				65646F8D21C752BB00F0F945 /* DebugManager.m */,
+			);
+			path = "调试工具";
+			sourceTree = "<group>";
+		};
+		65646F9621C752BB00F0F945 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				65646F9C21C752BB00F0F945 /* main.m */,
+				65646F9821C752BB00F0F945 /* xxwu.pch */,
+				65646F9A21C752BB00F0F945 /* LaunchScreen.storyboard */,
+				65646F9921C752BB00F0F945 /* Assets.xcassets */,
+				65646FAF21C7533300F0F945 /* Info.plist */,
+				65646F9721C752BB00F0F945 /* Settings.bundle */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		65646FC321C7633000F0F945 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				65646FC421C7633000F0F945 /* XXWUWebViewController.h */,
+				65646FC521C7633000F0F945 /* XXWUWebViewController.m */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		65646FC621C7633000F0F945 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65646FE121C76B6F00F0F945 /* XXWUSettingsManager.h */,
+				65646FE221C76B6F00F0F945 /* XXWUSettingsManager.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65646FD221C7633000F0F945 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				65646FE721C7763D00F0F945 /* Model */,
+				65646FDC21C7692E00F0F945 /* View */,
+				65646FD921C7634400F0F945 /* XXWUHomeViewController.h */,
+				65646FDA21C7634400F0F945 /* XXWUHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		65646FDC21C7692E00F0F945 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65646FE721C7763D00F0F945 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65646FE821C7766300F0F945 /* XXWUHomeMainEntranceDataModel.h */,
+				65646FE921C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65646FED21C77C9000F0F945 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				65646FEE21C77CAA00F0F945 /* XXWUClockViewController.h */,
+				65646FEF21C77CAA00F0F945 /* XXWUClockViewController.m */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		65646FF721C786B100F0F945 /* ZCPRouter */ = {
+			isa = PBXGroup;
+			children = (
+				65646FF821C786B100F0F945 /* ZCPControllerFactory+Category.h */,
+				65646FFD21C786B100F0F945 /* ZCPControllerFactory+Category.m */,
+				65646FF921C786B100F0F945 /* XXWUViewMap.h */,
+				65646FFB21C786B100F0F945 /* xxwuViewMap.plist */,
+				65646FFA21C786B100F0F945 /* ZCPServiceHandler+XXWU.h */,
+				65646FFE21C786B100F0F945 /* ZCPServiceHandler+XXWU.m */,
+			);
+			path = ZCPRouter;
+			sourceTree = "<group>";
+		};
+		6564700421C78DEF00F0F945 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6564700521C78DEF00F0F945 /* Login&Register */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6564700521C78DEF00F0F945 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				6564700621C78DFD00F0F945 /* XXWULoginViewController.h */,
+				6564700721C78DFD00F0F945 /* XXWULoginViewController.m */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
 		FB960D0D1F4D142C00D9E4D3 = {
 			isa = PBXGroup;
 			children = (
 				FB960D181F4D142C00D9E4D3 /* XXWU */,
 				FB960D171F4D142C00D9E4D3 /* Products */,
+				004A9C8F4234543B1997B279 /* Pods */,
+				2DDA8282EA1937632D7C7793 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,58 +263,10 @@
 		FB960D181F4D142C00D9E4D3 /* XXWU */ = {
 			isa = PBXGroup;
 			children = (
-				FB960D361F4D25A500D9E4D3 /* Class */,
-				FB960D191F4D142C00D9E4D3 /* AppDelegate.h */,
-				FB960D1A1F4D142C00D9E4D3 /* AppDelegate.m */,
-				FB960D221F4D142C00D9E4D3 /* Assets.xcassets */,
-				FB960D241F4D142C00D9E4D3 /* LaunchScreen.storyboard */,
-				FB960D271F4D142C00D9E4D3 /* Info.plist */,
-				FB960D281F4D142C00D9E4D3 /* main.m */,
-				FB960D351F4D1E0900D9E4D3 /* xxwu.pch */,
-				FB960D481F4D295C00D9E4D3 /* ZCPSingleton.h */,
-				FBEF67D91F4D2EA600C1DB44 /* ZCPSettingsManager.h */,
-				FBEF67DA1F4D2EA600C1DB44 /* ZCPSettingsManager.m */,
-				FBCF2EF01F4D2BBB003BDAB7 /* Settings.bundle */,
+				65646F7F21C752BB00F0F945 /* Classes */,
+				65646F9621C752BB00F0F945 /* Other */,
 			);
 			path = XXWU;
-			sourceTree = "<group>";
-		};
-		FB960D361F4D25A500D9E4D3 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-				FB960D371F4D25A500D9E4D3 /* Util */,
-				FB960D3E1F4D25A500D9E4D3 /* ViewController.h */,
-				FB960D3F1F4D25A500D9E4D3 /* ViewController.m */,
-				FB960D401F4D25A500D9E4D3 /* ZCPWebViewController.h */,
-				FB960D411F4D25A500D9E4D3 /* ZCPWebViewController.m */,
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		FB960D371F4D25A500D9E4D3 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				FBEF67DE1F4D306B00C1DB44 /* 调试工具 */,
-				FB960D381F4D25A500D9E4D3 /* UIView+MGEasyFrame.h */,
-				FB960D391F4D25A500D9E4D3 /* UIView+MGEasyFrame.m */,
-				FB960D3A1F4D25A500D9E4D3 /* ZCPIndicator.h */,
-				FB960D3B1F4D25A500D9E4D3 /* ZCPIndicator.m */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
-		FBEF67DE1F4D306B00C1DB44 /* 调试工具 */ = {
-			isa = PBXGroup;
-			children = (
-				FBEF67DF1F4D306B00C1DB44 /* DebugConsoleLogView.h */,
-				FBEF67E01F4D306B00C1DB44 /* DebugConsoleLogView.m */,
-				FBEF67E11F4D306B00C1DB44 /* DebugManager.h */,
-				FBEF67E21F4D306B00C1DB44 /* DebugManager.m */,
-				FBEF67E31F4D306B00C1DB44 /* DebugStatusBallView.h */,
-				FBEF67E41F4D306B00C1DB44 /* DebugStatusBallView.m */,
-				FBEF67E51F4D306B00C1DB44 /* DebugStatusBallView.xib */,
-			);
-			path = "调试工具";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB960D2C1F4D142C00D9E4D3 /* Build configuration list for PBXNativeTarget "XXWU" */;
 			buildPhases = (
+				723880AE14793CE284B43425 /* [CP] Check Pods Manifest.lock */,
 				FB960D121F4D142C00D9E4D3 /* Sources */,
 				FB960D131F4D142C00D9E4D3 /* Frameworks */,
 				FB960D141F4D142C00D9E4D3 /* Resources */,
+				C53590EEF08A6C8D5E34205B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,7 +297,7 @@
 		FB960D0E1F4D142C00D9E4D3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = zcp;
 				TargetAttributes = {
 					FB960D151F4D142C00D9E4D3 = {
@@ -195,40 +329,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB960D261F4D142C00D9E4D3 /* LaunchScreen.storyboard in Resources */,
-				FBEF67E91F4D306B00C1DB44 /* DebugStatusBallView.xib in Resources */,
-				FBCF2EF11F4D2BBB003BDAB7 /* Settings.bundle in Resources */,
-				FB960D231F4D142C00D9E4D3 /* Assets.xcassets in Resources */,
+				65646FA821C752BB00F0F945 /* Settings.bundle in Resources */,
+				6564700021C786B200F0F945 /* xxwuViewMap.plist in Resources */,
+				65646FAA21C752BB00F0F945 /* LaunchScreen.storyboard in Resources */,
+				65646FA921C752BB00F0F945 /* Assets.xcassets in Resources */,
+				65646FA121C752BB00F0F945 /* DebugStatusBallView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		723880AE14793CE284B43425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XXWU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C53590EEF08A6C8D5E34205B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XXWU/Pods-XXWU-resources.sh",
+				"${PODS_ROOT}/../../ZCPKit/ZCPKit/Router/viewMap.plist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/viewMap.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XXWU/Pods-XXWU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB960D121F4D142C00D9E4D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB960D451F4D25A500D9E4D3 /* ViewController.m in Sources */,
-				FBEF67E81F4D306B00C1DB44 /* DebugStatusBallView.m in Sources */,
-				FB960D461F4D25A500D9E4D3 /* ZCPWebViewController.m in Sources */,
-				FB960D421F4D25A500D9E4D3 /* UIView+MGEasyFrame.m in Sources */,
-				FB960D291F4D142C00D9E4D3 /* main.m in Sources */,
-				FB960D1B1F4D142C00D9E4D3 /* AppDelegate.m in Sources */,
-				FB960D431F4D25A500D9E4D3 /* ZCPIndicator.m in Sources */,
-				FBEF67DB1F4D2EA600C1DB44 /* ZCPSettingsManager.m in Sources */,
-				FBEF67E61F4D306B00C1DB44 /* DebugConsoleLogView.m in Sources */,
-				FBEF67E71F4D306B00C1DB44 /* DebugManager.m in Sources */,
+				65646FAB21C752BB00F0F945 /* main.m in Sources */,
+				65646FA521C752BB00F0F945 /* ViewController.m in Sources */,
+				6564700821C78DFD00F0F945 /* XXWULoginViewController.m in Sources */,
+				65646FEA21C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m in Sources */,
+				6564700321C786B200F0F945 /* ZCPServiceHandler+XXWU.m in Sources */,
+				65646FA721C752BB00F0F945 /* AppDelegate.m in Sources */,
+				65646FDB21C7634400F0F945 /* XXWUHomeViewController.m in Sources */,
+				65646FD321C7633000F0F945 /* XXWUWebViewController.m in Sources */,
+				6564700221C786B200F0F945 /* ZCPControllerFactory+Category.m in Sources */,
+				65646FA221C752BB00F0F945 /* DebugStatusBallView.m in Sources */,
+				65646FE321C76B6F00F0F945 /* XXWUSettingsManager.m in Sources */,
+				65646FF021C77CAA00F0F945 /* XXWUClockViewController.m in Sources */,
+				65646FA321C752BB00F0F945 /* DebugManager.m in Sources */,
+				65646FF321C782E600F0F945 /* XXWUDebugViewController.m in Sources */,
+				65646FA021C752BB00F0F945 /* DebugConsoleLogView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FB960D241F4D142C00D9E4D3 /* LaunchScreen.storyboard */ = {
+		65646F9A21C752BB00F0F945 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FB960D251F4D142C00D9E4D3 /* Base */,
+				65646F9B21C752BB00F0F945 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -250,6 +437,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -257,6 +445,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -305,6 +494,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -312,6 +502,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -342,14 +533,15 @@
 		};
 		FB960D2D1F4D142C00D9E4D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4DDE003E5280A99FE40EC39 /* Pods-XXWU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NMV57L4L3;
-				GCC_PREFIX_HEADER = XXWU/xxwu.pch;
-				INFOPLIST_FILE = XXWU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = XXWU/Other/xxwu.pch;
+				INFOPLIST_FILE = XXWU/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.xxwu1258;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,14 +553,15 @@
 		};
 		FB960D2E1F4D142C00D9E4D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75B6AAF85DBAB817D3663664 /* Pods-XXWU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7NMV57L4L3;
-				GCC_PREFIX_HEADER = XXWU/xxwu.pch;
-				INFOPLIST_FILE = XXWU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = XXWU/Other/xxwu.pch;
+				INFOPLIST_FILE = XXWU/Other/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.xxwu1258;
 				PRODUCT_NAME = "$(TARGET_NAME)";

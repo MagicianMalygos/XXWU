@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>className</key>
+		<string>XXWUHomeViewController</string>
+		<key>identifier</key>
+		<string>home</string>
+		<key>description</key>
+		<string>首页</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>XXWUWebViewController</string>
+		<key>identifier</key>
+		<string>webview</string>
+		<key>description</key>
+		<string>web页</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>XXWUClockViewController</string>
+		<key>identifier</key>
+		<string>clock</string>
+		<key>description</key>
+		<string>闹钟页</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>XXWULoginViewController</string>
+		<key>identifier</key>
+		<string>login</string>
+		<key>description</key>
+		<string>登录页</string>
+	</dict>
+</array>
+</plist>

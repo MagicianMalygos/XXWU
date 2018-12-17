@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>className</key>
+		<string>ZCPViewController</string>
+		<key>identifier</key>
+		<string>view</string>
+		<key>description</key>
+		<string>视图控制器</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ZCPTableViewController</string>
+		<key>identifier</key>
+		<string>tableview</string>
+		<key>description</key>
+		<string>表格视图控制器</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>ZCPWebViewController</string>
+		<key>identifier</key>
+		<string>webview</string>
+		<key>description</key>
+		<string>web容器视图控制器</string>
+	</dict>
+</array>
+</plist>

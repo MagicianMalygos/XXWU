@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ZCPGlobal.h"
 
-#define APP_URL_SCHEME          @"zcp"
-#define APP_URL_DEBUG           @"debugvc"
+static NSString * ZCPAppURLScheme = @"zcp";
+static NSString * ZCPDebugURLScheme = @"debugvc";
 
 /**
  打开一个url，该url可以是以下几种情况
@@ -47,6 +47,7 @@ BOOL openURL(NSString *url);
 
 DEF_SINGLETON
 
+
 /**
  打开一个url
 
@@ -58,6 +59,13 @@ DEF_SINGLETON
  应用url协议
  */
 + (NSString *)appURLScheme;
+
+/**
+ 设置app协议
+ 
+ @param appURLScheme app协议字符串
+ */
++ (void)setAppURLScheme:(NSString *)appURLScheme;
 
 /**
  是否app url

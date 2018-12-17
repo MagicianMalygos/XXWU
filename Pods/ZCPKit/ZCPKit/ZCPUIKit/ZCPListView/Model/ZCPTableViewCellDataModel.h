@@ -1,5 +1,5 @@
 //
-//  ZCPCellDataModel.h
+//  ZCPTableViewCellDataModel.h
 //  ZCPKit
 //
 //  Created by zhuchaopeng on 16/9/21.

@@ -12,7 +12,6 @@
 #import "ZCPVCDataModel.h"
 #import "ZCPControllerFactory.h"
 #import "ZCPNavigator.h"
-
 #import "ZCPCategory.h"
 
 // ----------------------------------------------------------------------
@@ -67,7 +66,7 @@ IMP_SINGLETON
     } else if ([ZCPURLHelper getUrlParams:url]) {
         [self handleWebURL];
     // url是debug url
-    } else if ([scheme isEqualToString:APP_URL_DEBUG]) {
+    } else if ([scheme isEqualToString:ZCPDebugURLScheme]) {
         [self handleDebugVCURL];
     // 是browser url
     } else {
@@ -226,7 +225,12 @@ IMP_SINGLETON
 
 // app url协议
 + (NSString *)appURLScheme {
-    return APP_URL_SCHEME;
+    return ZCPAppURLScheme;
+}
+
+// 设置app协议
++ (void)setAppURLScheme:(NSString *)appURLScheme {
+    ZCPAppURLScheme = appURLScheme;
 }
 
 // 是否是app url

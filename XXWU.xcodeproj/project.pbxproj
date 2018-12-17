@@ -371,7 +371,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XXWU/Pods-XXWU-resources.sh",
-				"${PODS_ROOT}/../../ZCPKit/ZCPKit/Router/viewMap.plist",
+				"${PODS_ROOT}/ZCPKit/ZCPKit/Router/viewMap.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (

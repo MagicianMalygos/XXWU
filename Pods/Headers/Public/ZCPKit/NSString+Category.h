@@ -1,1 +1,1 @@
-../../../../../ZCPKit/ZCPKit/Category/NSString+Category.h
+../../../ZCPKit/ZCPKit/Category/NSString+Category.h

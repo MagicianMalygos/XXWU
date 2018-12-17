@@ -1,1 +1,1 @@
-../../../../../ZCPKit/ZCPKit/Global/ZCPSingleton.h
+../../../ZCPKit/ZCPKit/Global/ZCPSingleton.h

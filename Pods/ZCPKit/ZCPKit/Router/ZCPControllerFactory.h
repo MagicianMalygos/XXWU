@@ -52,6 +52,14 @@ DEF_SINGLETON
  */
 - (UIViewController *)generateVCWithIdentifier:(NSString *)identifier;
 
+/**
+ 通过一组控制器标识 生成 一组控制器对象
+
+ @param identifiers 一组控制器标识
+ @return 一组控制器对象
+ */
+- (NSArray *)generateVCsWithIdentifiers:(NSArray *)identifiers;
+
 #pragma mark - 控制器配置方法
 
 /**

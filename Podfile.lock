@@ -97,7 +97,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ZCPKit:
-    :commit: 603e6c2fe205e5da0300fc62b2ecb0c639d56afd
+    :commit: ed958a91955abc12d156ef30cfa40080b89ae03b
     :git: https://gitlab.com/Malygos/ZCPKit.git
 
 SPEC CHECKSUMS:

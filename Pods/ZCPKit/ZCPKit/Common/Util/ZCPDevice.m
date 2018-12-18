@@ -23,7 +23,6 @@
 
 @implementation ZCPDevice
 
-
 // ----------------------------------------------------------------------
 #pragma mark - statistics
 // ----------------------------------------------------------------------
@@ -104,10 +103,7 @@
 
 + (BOOL)hasAuthorization {
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    
     return authStatus != AVAuthorizationStatusDenied;
-    
-    return YES;
 }
 
 + (BOOL)isQRCodeScanAvailable {

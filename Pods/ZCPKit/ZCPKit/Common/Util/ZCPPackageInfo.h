@@ -13,17 +13,23 @@ typedef enum {
     PAAppChannelAppStore=100,//appstore
 }PAAppChannel;
 
-#define kURLSchemeIdnentifier                           @"PingAnHaoFang"
-
 @interface ZCPPackageInfo : NSObject
 
-// 应用包名
+/**
+ 应用包名
+ */
 + (NSString *)appPackageNameString;
-// 应用显示名称
+/**
+ 应用显示名称
+ */
 + (NSString *)appDisplayNameString;
-// 编译版本号
+/**
+ 编译版本号
+ */
 + (NSString *)appBuildVersionString;
-// 应用版本号
+/**
+ 应用版本号
+ */
 + (NSString *)appVersionString;
 
 @end

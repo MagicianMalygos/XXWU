@@ -10,17 +10,6 @@
 @class ZCPVCDataModel;
 @protocol ZCPNavigatorProtocol;
 
-/**
- 控制器跳转方式
-
- - ZCPViewNavJumpMode: 导航方式跳转
- - ZCPViewModalJumpMode: 模态方式跳转
- */
-typedef NS_ENUM(NSInteger, ZCPViewJumpMode) {
-    ZCPViewNavJumpMode      = 1,
-    ZCPViewModalJumpMode    = 2
-};
-
 // ----------------------------------------------------------------------
 #pragma mark - 基础导航器
 // ----------------------------------------------------------------------
@@ -75,7 +64,7 @@ typedef NS_ENUM(NSInteger, ZCPViewJumpMode) {
 
  @param index tabBarItem索引值
  */
-- (void)goToTabBarItemIndex:(int)index;
+- (void)goToTabBarItemIndex:(NSUInteger)index;
 
 @end
 
@@ -91,8 +80,6 @@ typedef NS_ENUM(NSInteger, ZCPViewJumpMode) {
 @property (nonatomic, weak) UIViewController<ZCPNavigatorProtocol> *formerViewController;
 /// 后一控制器
 @property (nonatomic, weak) UIViewController<ZCPNavigatorProtocol> *latterViewController;
-/// 视图跳转模式
-@property (nonatomic, assign) ZCPViewJumpMode viewJumpModel;
 
 /**
  带参初始化方法

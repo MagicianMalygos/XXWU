@@ -113,7 +113,7 @@
  *  获取自定义选择器
  */
 ZCPPickerView *getPicker(NSArray *componentArray) {
-    ZCPPickerView *pickerView = [[ZCPPickerView alloc] initWithFrame:CGRectMake(0, 0, APPLICATIONWIDTH, 200)];
+    ZCPPickerView *pickerView = [[ZCPPickerView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 200)];
     
     NSMutableArray *tempComponentArray = [NSMutableArray array];
     for (NSArray *array in componentArray) {

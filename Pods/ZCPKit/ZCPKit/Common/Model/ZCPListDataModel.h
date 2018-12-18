@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSNumber *rows;
 // 是否有更多
 @property (nonatomic, assign) BOOL hasMore;
-// 页面开始标记
+// 页面起始位置标记
 @property (nonatomic, assign) NSInteger start;
 // 每次服务器返回的最大数据数量
 @property (nonatomic, assign) NSInteger max;

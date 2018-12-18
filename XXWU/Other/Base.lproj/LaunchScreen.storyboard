@@ -21,49 +21,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEF-xd-lhl">
-                                <rect key="frame" x="16" y="70" width="171.5" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-PL-A4H">
+                                <rect key="frame" x="0.0" y="158.5" width="375" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="w" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFs-Ag-ErB">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Myv-77-JhH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <color key="textColor" red="0.2690410875" green="0.32479621219999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEF-xd-lhl">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WDY-pd-elz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <color key="textColor" red="0.26904108748409039" green="0.32479621217455346" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lip-XL-4Ns">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <color key="textColor" red="0.26904108748409039" green="0.32479621217455346" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I________I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-mD-OFP">
+                                        <rect key="frame" x="0.0" y="278" width="375" height="72"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <color key="textColor" red="0.2690410875" green="0.32479621219999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WDY-pd-elz"/>
+                                    <constraint firstItem="NEF-xd-lhl" firstAttribute="leading" secondItem="JwD-PL-A4H" secondAttribute="leading" id="7rh-fN-OeR"/>
+                                    <constraint firstItem="JFs-Ag-ErB" firstAttribute="centerY" secondItem="JwD-PL-A4H" secondAttribute="centerY" id="Fgj-P0-lXu"/>
+                                    <constraint firstAttribute="trailing" secondItem="JFs-Ag-ErB" secondAttribute="trailing" id="KKF-2A-ZTB"/>
+                                    <constraint firstAttribute="bottom" secondItem="WsD-mD-OFP" secondAttribute="bottom" id="SZm-k4-K8B"/>
+                                    <constraint firstAttribute="trailing" secondItem="WsD-mD-OFP" secondAttribute="trailing" id="UHM-RJ-5zy"/>
+                                    <constraint firstItem="NEF-xd-lhl" firstAttribute="width" secondItem="lip-XL-4Ns" secondAttribute="width" id="ekf-KC-liZ"/>
+                                    <constraint firstAttribute="height" constant="350" id="imr-IH-Hcr"/>
+                                    <constraint firstAttribute="trailing" secondItem="lip-XL-4Ns" secondAttribute="trailing" id="juf-sT-UES"/>
+                                    <constraint firstItem="JFs-Ag-ErB" firstAttribute="leading" secondItem="JwD-PL-A4H" secondAttribute="leading" id="kNZ-hJ-FHV"/>
+                                    <constraint firstItem="NEF-xd-lhl" firstAttribute="top" secondItem="JwD-PL-A4H" secondAttribute="top" id="oBX-ME-Fad"/>
+                                    <constraint firstItem="lip-XL-4Ns" firstAttribute="height" secondItem="NEF-xd-lhl" secondAttribute="height" id="ohK-LZ-ZVJ"/>
+                                    <constraint firstItem="lip-XL-4Ns" firstAttribute="leading" secondItem="NEF-xd-lhl" secondAttribute="trailing" id="sIH-Y9-Yh8"/>
+                                    <constraint firstItem="WsD-mD-OFP" firstAttribute="leading" secondItem="JwD-PL-A4H" secondAttribute="leading" id="u5P-OW-B8s"/>
+                                    <constraint firstItem="lip-XL-4Ns" firstAttribute="top" secondItem="NEF-xd-lhl" secondAttribute="top" id="ymH-of-qCC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" red="0.26904108748409039" green="0.32479621217455346" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lip-XL-4Ns">
-                                <rect key="frame" x="187.5" y="70" width="171.5" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" red="0.26904108748409039" green="0.32479621217455346" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="w" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFs-Ag-ErB">
-                                <rect key="frame" x="16" y="170" width="343" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" red="0.2690410875" green="0.32479621219999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I_______I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsD-mD-OFP">
-                                <rect key="frame" x="0.0" y="292" width="375" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" red="0.2690410875" green="0.32479621219999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lip-XL-4Ns" firstAttribute="leading" secondItem="NEF-xd-lhl" secondAttribute="trailing" id="6PN-e8-Z9D"/>
-                            <constraint firstItem="NEF-xd-lhl" firstAttribute="width" secondItem="lip-XL-4Ns" secondAttribute="width" id="9vF-ZN-Fub"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JFs-Ag-ErB" secondAttribute="trailing" id="C59-Xc-Iza"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lip-XL-4Ns" secondAttribute="trailing" id="J2N-H6-826"/>
-                            <constraint firstAttribute="trailing" secondItem="WsD-mD-OFP" secondAttribute="trailing" id="ZYs-nE-E5O"/>
-                            <constraint firstItem="NEF-xd-lhl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="cOh-kv-flO"/>
-                            <constraint firstItem="JFs-Ag-ErB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="exk-pm-WWy"/>
-                            <constraint firstItem="lip-XL-4Ns" firstAttribute="top" secondItem="NEF-xd-lhl" secondAttribute="top" id="hra-RU-s3k"/>
-                            <constraint firstItem="NEF-xd-lhl" firstAttribute="top" secondItem="Uhl-zc-c9J" secondAttribute="bottom" constant="50" id="iBI-GE-j9Z"/>
-                            <constraint firstItem="WsD-mD-OFP" firstAttribute="top" secondItem="JFs-Ag-ErB" secondAttribute="bottom" constant="50" id="iIT-9K-3vX"/>
-                            <constraint firstItem="lip-XL-4Ns" firstAttribute="height" secondItem="NEF-xd-lhl" secondAttribute="height" id="mAc-It-Hm3"/>
-                            <constraint firstItem="WsD-mD-OFP" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="sTF-Jz-O5w"/>
-                            <constraint firstItem="JFs-Ag-ErB" firstAttribute="top" secondItem="NEF-xd-lhl" secondAttribute="bottom" constant="50" id="xJU-uH-sam"/>
+                            <constraint firstItem="JwD-PL-A4H" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="CBT-Mk-2Me"/>
+                            <constraint firstItem="JwD-PL-A4H" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qa0-ra-Bkk"/>
+                            <constraint firstAttribute="trailing" secondItem="JwD-PL-A4H" secondAttribute="trailing" id="vlA-Hj-2eI"/>
                         </constraints>
                     </view>
                 </viewController>

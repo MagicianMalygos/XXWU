@@ -37,14 +37,6 @@ static NSString *kZCPViewController_routerHelper = @"kZCPViewController_routerHe
     self.routerHelper.latterViewController = latterViewController;
 }
 
-- (ZCPViewJumpMode)viewJumpModel {
-    return self.routerHelper.viewJumpModel;
-}
-
-- (void)setViewJumpModel:(ZCPViewJumpMode)viewJumpModel {
-    self.routerHelper.viewJumpModel = viewJumpModel;
-}
-
 // ----------------------------------------------------------------------
 #pragma mark - jump / back
 // ----------------------------------------------------------------------
@@ -52,7 +44,6 @@ static NSString *kZCPViewController_routerHelper = @"kZCPViewController_routerHe
     self.latterViewController                           = viewControllerToPresent;
     if ([viewControllerToPresent conformsToProtocol:@protocol(ZCPNavigatorProtocol)]) {
         viewControllerToPresent.formerViewController    = self;
-        viewControllerToPresent.viewJumpModel           = ZCPViewModalJumpMode;
     }
     [super presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
@@ -84,7 +75,6 @@ static NSString *kZCPViewController_routerHelper = @"kZCPViewController_routerHe
 
 @synthesize formerViewController    = _formerViewController;
 @synthesize latterViewController    = _latterViewController;
-@synthesize viewJumpModel           = _viewJumpModel;
 
 // just fix warning
 - (instancetype)initWithQuery:(NSDictionary *)query {

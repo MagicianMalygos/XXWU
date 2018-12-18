@@ -56,10 +56,8 @@
 
 // 屏幕高度
 #define SCREENHEIGHT                    [[UIScreen mainScreen] bounds].size.height
-// 应用高度
-#define APPLICATIONHEIGHT               [[UIScreen mainScreen] bounds].size.height
-// 应用宽度
-#define APPLICATIONWIDTH                [[UIScreen mainScreen] bounds].size.width
+// 屏幕宽度
+#define SCREENWIDTH                     [[UIScreen mainScreen] bounds].size.width
 // 状态栏高度
 #define Height_StatusBar                (iPhoneX?44:20)
 // 导航栏高度

@@ -50,18 +50,17 @@
     return sDate;
 }
 
-
 #pragma mark - 日期信息
-// 获取星期（星期一、星期二、...）
-- (NSString *)weekday {
-    NSArray *weekdays               = [NSArray arrayWithObjects:@"周日", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六", nil];
+
+- (NSUInteger)weekdayNumber {
     NSCalendar *calendar            = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSTimeZone *timeZone            = [[NSTimeZone alloc] initWithName:@"Asia/Shanghai"];
     [calendar setTimeZone:timeZone];
     NSCalendarUnit calendarUnit     = NSCalendarUnitWeekday;
     NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:self];
-    NSString *week                  = [weekdays objectAtIndex:theComponents.weekday - 1];
-    return week;
+    NSUInteger weekdayNumber        = theComponents.weekday - 1;
+    weekdayNumber                   = (weekdayNumber != 0) ? weekdayNumber : 7;
+    return weekdayNumber;
 }
 
 @end

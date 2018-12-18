@@ -62,7 +62,6 @@
         UIViewController<ZCPNavigatorProtocol> *vc    = (UIViewController<ZCPNavigatorProtocol> *)viewController;
         topvc.latterViewController  = vc;
         vc.formerViewController     = topvc;
-        vc.viewJumpModel            = ZCPViewNavJumpMode;
     }
 }
 
@@ -92,12 +91,12 @@
 // ----------------------------------------------------------------------
 
 - (ZCPBaseNavigator *)navigator {
-    id object = objc_getAssociatedObject(self, "kZCPNavigationController_navigator");
+    id object = objc_getAssociatedObject(self, _cmd);
     return object;
 }
 
 - (void)setNavigator:(ZCPBaseNavigator *)navigator {
-    objc_setAssociatedObject(self, "kZCPNavigationController_navigator", navigator, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(navigator), navigator, OBJC_ASSOCIATION_ASSIGN);
 }
 
 @end

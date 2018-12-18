@@ -21,9 +21,6 @@ static NSString * const kOpenUDIDDomain = @"pafang.OpenUDID";
 static NSString * const kOpenUDIDSlotPBPrefix = @"pafang.OpenUDID.slot.";
 static int const kOpenUDIDRedundancySlots = 100;
 
-
-
-
 @implementation ZCPOpenUDID
 
 

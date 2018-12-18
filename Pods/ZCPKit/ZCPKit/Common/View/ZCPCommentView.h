@@ -7,7 +7,6 @@
 //
 
 #import "ZCPTextView.h"
-
 @protocol ZCPCommentViewDelegate;
 
 @interface ZCPCommentView : UIView <UITextViewDelegate>
@@ -20,38 +19,41 @@
 // ----------------------------------------------------------------------
 #pragma mark - Basic Method
 // ----------------------------------------------------------------------
+
 /**
- *  实例化方法
- *
- *  @param target 目标控制器
+ 根据目标控制器实例化
+
+ @param target 目标控制器
  */
 - (instancetype)initWithTarget:(UIViewController *)target;
+
 /**
- *  显示评论视图
+ 显示评论视图
  */
 - (void)showCommentView;
+
 /**
- *  隐藏评论视图
+ 隐藏评论视图
  */
 - (void)hideCommentView;
+
 /**
- *  清除文本框内容
+ 清除文本框内容
  */
 - (void)clearText;
 
 @end
 
-
 // ----------------------------------------------------------------------
 #pragma mark - PROTOCOL
 // ----------------------------------------------------------------------
 @protocol ZCPCommentViewDelegate <NSObject>
+
 /**
- *  键盘Retuen键点击响应方法
- *
- *  @param keyboardResponder 键盘响应者
- *
- *  @return YES表示点击隐藏键盘，NO表示点击不隐藏键盘
+ 键盘Retuen键点击响应方法
+
+ @param keyboardResponder 键盘响应者
+ @return YES表示点击隐藏键盘，NO表示点击不隐藏键盘
  */
 - (BOOL)textInputShouldReturn:(ZCPTextView *)keyboardResponder;
 @end

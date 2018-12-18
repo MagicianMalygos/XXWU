@@ -11,11 +11,13 @@
 @implementation ZCPDataModel
 
 + (instancetype)modelFromDictionary:(NSDictionary *)dictionary {
-    return [[ZCPDataModel alloc] init];
+    return nil;
 }
 
 - (instancetype)initWithDefault {
-    return [[ZCPDataModel alloc] init];
+    if (self = [super init]) {
+    }
+    return self;
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {

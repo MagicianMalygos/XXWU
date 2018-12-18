@@ -46,8 +46,8 @@
 - (instancetype)initWithDefault {
     if (self = [super init]) {
         self.groupedCellPosition    = ZCPGroupedCellPositionNone;
-        self.topLineWidth           = APPLICATIONWIDTH;
-        self.bottomLineWidth        = APPLICATIONWIDTH;
+        self.topLineWidth           = SCREENWIDTH;
+        self.bottomLineWidth        = SCREENWIDTH;
         self.cellTag                = INT_MAX;
     }
     return self;

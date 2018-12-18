@@ -95,7 +95,7 @@
     }
 }
 
-- (void)goToTabBarItemIndex:(int)index {
+- (void)goToTabBarItemIndex:(NSUInteger)index {
     if ([self.rootViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navigationController = (UINavigationController *)self.rootViewController;
         UIViewController *rootViewController = navigationController.viewControllers[0];
@@ -103,8 +103,8 @@
         if ([rootViewController isKindOfClass:[UITabBarController class]]) {
             UITabBarController *tabBarController = (UITabBarController *)rootViewController;
             
-            int tabBarItemIndex             = index;
-            int tabBarItemCount             = (int)tabBarController.viewControllers.count;
+            NSUInteger tabBarItemIndex      = index;
+            NSUInteger tabBarItemCount      = tabBarController.viewControllers.count;
             
             // popToRoot
             [self popToRoot:nil];

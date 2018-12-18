@@ -14,8 +14,8 @@
 
 @interface ZCPOpenUDID : NSObject
 
-+ (NSString*) value;
-+ (NSString*) valueWithError:(NSError**)error;
-+ (void) setOptOut:(BOOL)optOutValue;
++ (NSString *)value;
++ (NSString *)valueWithError:(NSError**)error;
++ (void)setOptOut:(BOOL)optOutValue;
 
 @end

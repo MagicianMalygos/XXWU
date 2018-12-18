@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (Category)
+@interface NSArray<ObjectType> (Category)
 
 /**
  安全获取index下的元素
@@ -17,17 +17,17 @@
 
  @return 索引对应元素
  */
-- (id)safeObjectAtIndex:(NSUInteger)index;
+- (ObjectType)safeObjectAtIndex:(NSUInteger)index;
 
 @end
 
-@interface NSMutableArray (Category)
+@interface NSMutableArray<ObjectType> (Category)
 
 /**
  安全添加元素
 
  @param anobject 待添加元素
  */
-- (void)safeAddObject:(id)anobject;
+- (void)safeAddObject:(ObjectType)anobject;
 
 @end

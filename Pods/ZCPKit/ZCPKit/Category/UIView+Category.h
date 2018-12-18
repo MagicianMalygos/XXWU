@@ -10,9 +10,16 @@
 
 @interface UIView (Background)
 
-// 设置背景颜色
+/**
+ 设置背景颜色
+
+ @param color 背景颜色
+ */
 - (void)setCustomBackgroundColor:(UIColor *)color;
-// 清除背景颜色
+
+/**
+ 清除背景颜色
+ */
 - (void)clearBackgroundColor;
 
 @end

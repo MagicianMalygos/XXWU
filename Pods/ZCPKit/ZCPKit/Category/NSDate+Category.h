@@ -43,11 +43,10 @@
  */
 - (NSString *)toStringWithDateFormat:(NSString *)format;
 
-
 #pragma mark - 日期信息
 /**
- 获取星期（星期一、星期二、...）
+ 获取星期 1~7
  */
-- (NSString *)weekday;
+- (NSUInteger)weekdayNumber;
 
 @end

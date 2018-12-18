@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // setting key
-extern NSString * const IS_FIRSTOPENAPP;        // 是否首次开启APP
+extern NSString * const HAS_BEEN_LAUNCHED;      // 是否已经启动过app
 extern NSString * const SETTINGID_SHAKE;        // 摇一摇
 extern NSString * const SETTINGID_DEBUGTOOL;    // 调试工具
 
@@ -22,10 +22,12 @@ DEF_SINGLETON
 @property (nonatomic, strong, readonly) NSDictionary *preference;
 
 - (void)setup;
-- (void)readingPreference;
+- (void)readPreference;
 
 - (BOOL)isFirstOpenApp;
-- (void)setFirstOpenApp;
+- (void)setHasBeenLaunched;
+
+- (BOOL)isOpenDebugger;
 
 @end
 

@@ -9,7 +9,7 @@
 #import "XXWUSettingsManager.h"
 
 // setting key
-NSString * const IS_FIRSTOPENAPP        = @"is_firstopenapp";
+NSString * const HAS_BEEN_LAUNCHED      = @"has_been_launched";
 NSString * const SETTINGID_SHAKE        = @"settingsid_shake";
 NSString * const SETTINGID_DEBUGTOOL    = @"settingsid_debugtool";
 
@@ -35,10 +35,10 @@ IMP_SINGLETON
     }
 }
 
-- (void)readingPreference {
+- (void)readPreference {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSNumber *debug = [userDefaults objectForKey:SETTINGID_DEBUGTOOL];
-    NSNumber *shake = [userDefaults objectForKey:SETTINGID_SHAKE];
+    NSNumber *debug = @([[userDefaults objectForKey:SETTINGID_DEBUGTOOL] boolValue]);
+    NSNumber *shake = @([[userDefaults objectForKey:SETTINGID_SHAKE] boolValue]);
     
     _preference = @{SETTINGID_DEBUGTOOL: debug,
                     SETTINGID_SHAKE: shake};
@@ -46,16 +46,19 @@ IMP_SINGLETON
 
 - (BOOL)isFirstOpenApp {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults objectForKey:IS_FIRSTOPENAPP]) {
-        return NO;
-    }
-    return YES;
+    return ![[defaults objectForKey:HAS_BEEN_LAUNCHED] boolValue];
 }
 
-- (void)setFirstOpenApp {
+- (void)setHasBeenLaunched {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"1"  forKey:IS_FIRSTOPENAPP];
-    [defaults synchronize];
+    if (![[defaults objectForKey:HAS_BEEN_LAUNCHED] boolValue]) {
+        [defaults setObject:@YES forKey:HAS_BEEN_LAUNCHED];
+        [defaults synchronize];
+    }
+}
+
+- (BOOL)isOpenDebugger {
+    return [[[XXWUSettingsManager sharedInstance].preference objectForKey:SETTINGID_DEBUGTOOL] boolValue];
 }
 
 #pragma mark - getters and setters

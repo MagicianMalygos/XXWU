@@ -20,9 +20,9 @@
     // initialize
     [ZCPURLHelper setAppURLScheme:@"xxwu"];
     
-    /// view map
+    // view map
     [ZCPNavigator readViewControllerMapWithViewMapNamed:@"xxwuViewMap"];
-    /// vc stack
+    // vc stack
     UINavigationController *nav = [[ZCPControllerFactory sharedInstance] generateCustomStack];
     [[ZCPNavigator sharedInstance] setupRootViewController:nav];
     
@@ -32,8 +32,9 @@
     
     // setting
     [[XXWUSettingsManager sharedInstance] setup];
-    [self setupSetting];
-    [[XXWUSettingsManager sharedInstance] setFirstOpenApp];
+    [[XXWUSettingsManager sharedInstance] readPreference];
+    [DebugManager defaultManager].alwaysShowStatusBall = [[XXWUSettingsManager sharedInstance] isOpenDebugger];
+    [[XXWUSettingsManager sharedInstance] setHasBeenLaunched];
     
     return YES;
 }
@@ -45,21 +46,15 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    [self setupSetting];
+    // 更新app设置
+    [[XXWUSettingsManager sharedInstance] readPreference];
+    [DebugManager defaultManager].alwaysShowStatusBall = [[XXWUSettingsManager sharedInstance] isOpenDebugger];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-}
-
-#pragma mark - private
-
-- (void)setupSetting {
-    [[XXWUSettingsManager sharedInstance] readingPreference];
-    BOOL openDebugger = [[[XXWUSettingsManager sharedInstance].preference objectForKey:SETTINGID_DEBUGTOOL] boolValue];
-    [DebugManager defaultManager].alwaysShowStatusBall = openDebugger;
 }
 
 @end

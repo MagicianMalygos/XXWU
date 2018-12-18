@@ -135,13 +135,13 @@
 		65646F8621C752BB00F0F945 /* 调试工具 */ = {
 			isa = PBXGroup;
 			children = (
-				65646F8721C752BB00F0F945 /* DebugStatusBallView.h */,
 				65646F8821C752BB00F0F945 /* DebugManager.h */,
-				65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */,
-				65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */,
-				65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */,
-				65646F8C21C752BB00F0F945 /* DebugConsoleLogView.h */,
 				65646F8D21C752BB00F0F945 /* DebugManager.m */,
+				65646F8721C752BB00F0F945 /* DebugStatusBallView.h */,
+				65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */,
+				65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */,
+				65646F8C21C752BB00F0F945 /* DebugConsoleLogView.h */,
+				65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */,
 			);
 			path = "调试工具";
 			sourceTree = "<group>";

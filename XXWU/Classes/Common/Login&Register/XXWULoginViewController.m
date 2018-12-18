@@ -49,6 +49,7 @@
     self.tipLabel.frame = CGRectMake(16, 50, self.view.width-32, tipHeight);
     self.passwordInputView.frame = CGRectMake(16, self.tipLabel.bottom + 20, self.view.width-32, 55);
     self.loginButton.frame = CGRectMake(16, self.passwordInputView.bottom + 50, self.view.width - 32, 55);
+    self.loginButton.layer.cornerRadius = 27.5;
 }
 
 #pragma mark - load
@@ -60,8 +61,8 @@
     [self.view addSubview:self.loginButton];
     
     // pro
-    self.tipLabel.text = @"您需要通过密码校验之后才能继续进行后续操作！";
-    [self.loginButton setTitle:@"登陆" forState:UIControlStateNormal];
+    self.tipLabel.text = @"请输入密码，密码将在后续的过程中被校验！";
+    [self.loginButton setTitle:@"进入" forState:UIControlStateNormal];
     
     // event
     [self.loginButton addTarget:self action:@selector(clickLoginButton) forControlEvents:UIControlEventTouchUpInside];

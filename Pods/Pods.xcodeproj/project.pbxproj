@@ -2723,6 +2723,30 @@
 			};
 			name = Debug;
 		};
+		2E157C23F756D340DFC9ABEA16F1D452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC4D7B953604FA8503E1EE1178B2F7F /* ZCPKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZCPKit/ZCPKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZCPKit;
+				PRODUCT_NAME = ZCPKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		49BD88DBB3E5A7148807412C29B70C50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F17E97DE3B6E4F7450C1E1DA15D03AE /* SDWebImage.xcconfig */;
@@ -2830,6 +2854,29 @@
 			};
 			name = Release;
 		};
+		5FB6A9FB18822EDE366D387C7C90CD87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC4D7B953604FA8503E1EE1178B2F7F /* ZCPKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZCPKit/ZCPKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZCPKit;
+				PRODUCT_NAME = ZCPKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		6487F40EE5844C574EBE04EB00C437AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90007E3961E8CEDC0E2BB662CCA296C6 /* Aspects.xcconfig */;
@@ -2852,30 +2899,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		732934F7709928FEB7FAF8B74B7E08DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DC4D7B953604FA8503E1EE1178B2F7F /* ZCPKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ZCPKit/ZCPKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ZCPKit;
-				PRODUCT_NAME = ZCPKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		7C34323C711B950FC0D35159718BE953 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2963,29 +2986,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		9918A631216805B1475BA173FD757068 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DC4D7B953604FA8503E1EE1178B2F7F /* ZCPKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ZCPKit/ZCPKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ZCPKit;
-				PRODUCT_NAME = ZCPKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -3233,8 +3233,8 @@
 		7D0EEB1A80DA90323E6161074D439F7F /* Build configuration list for PBXNativeTarget "ZCPKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9918A631216805B1475BA173FD757068 /* Debug */,
-				732934F7709928FEB7FAF8B74B7E08DA /* Release */,
+				5FB6A9FB18822EDE366D387C7C90CD87 /* Debug */,
+				2E157C23F756D340DFC9ABEA16F1D452 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

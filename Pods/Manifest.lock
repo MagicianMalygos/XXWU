@@ -26,46 +26,46 @@ PODS:
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
   - YYModel (1.0.4)
-  - ZCPKit (0.0.3):
-    - ZCPKit/Cache (= 0.0.3)
-    - ZCPKit/Category (= 0.0.3)
-    - ZCPKit/Common (= 0.0.3)
-    - ZCPKit/Global (= 0.0.3)
-    - ZCPKit/Network (= 0.0.3)
-    - ZCPKit/Router (= 0.0.3)
-    - ZCPKit/Util (= 0.0.3)
-    - ZCPKit/ZCPUIKit (= 0.0.3)
-  - ZCPKit/Cache (0.0.3):
-    - ZCPKit/Cache/CoreData (= 0.0.3)
+  - ZCPKit (0.0.1):
+    - ZCPKit/Cache (= 0.0.1)
+    - ZCPKit/Category (= 0.0.1)
+    - ZCPKit/Common (= 0.0.1)
+    - ZCPKit/Global (= 0.0.1)
+    - ZCPKit/Network (= 0.0.1)
+    - ZCPKit/Router (= 0.0.1)
+    - ZCPKit/Util (= 0.0.1)
+    - ZCPKit/ZCPUIKit (= 0.0.1)
+  - ZCPKit/Cache (0.0.1):
+    - ZCPKit/Cache/CoreData (= 0.0.1)
     - ZCPKit/Global
-  - ZCPKit/Cache/CoreData (0.0.3):
+  - ZCPKit/Cache/CoreData (0.0.1):
     - MagicalRecord
     - ZCPKit/Global
-  - ZCPKit/Category (0.0.3):
+  - ZCPKit/Category (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/Common (0.0.3):
+  - ZCPKit/Common (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Util
-  - ZCPKit/Global (0.0.3)
-  - ZCPKit/Network (0.0.3):
+  - ZCPKit/Global (0.0.1)
+  - ZCPKit/Network (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/Router (0.0.3):
+  - ZCPKit/Router (0.0.1):
     - Aspects
     - ZCPKit/Common
     - ZCPKit/Global
-  - ZCPKit/Util (0.0.3):
+  - ZCPKit/Util (0.0.1):
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit (0.0.3):
+  - ZCPKit/ZCPUIKit (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
-    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.3)
-    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.3)
-  - ZCPKit/ZCPUIKit/ZCPListView (0.0.3):
+    - ZCPKit/ZCPUIKit/ZCPListView (= 0.0.1)
+    - ZCPKit/ZCPUIKit/ZCPWebView (= 0.0.1)
+  - ZCPKit/ZCPUIKit/ZCPListView (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Common
     - ZCPKit/Global
-  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.3):
+  - ZCPKit/ZCPUIKit/ZCPWebView (0.0.1):
     - ZCPKit/Category
     - ZCPKit/Global
     - ZCPKit/Network
@@ -78,7 +78,7 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYModel (~> 1.0.4)
-  - ZCPKit (from `https://gitlab.com/Malygos/ZCPKit.git`)
+  - ZCPKit (~> 0.0.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -90,15 +90,8 @@ SPEC REPOS:
     - MLeaksFinder
     - SDWebImage
     - YYModel
-
-EXTERNAL SOURCES:
-  ZCPKit:
-    :git: https://gitlab.com/Malygos/ZCPKit.git
-
-CHECKOUT OPTIONS:
-  ZCPKit:
-    :commit: ed958a91955abc12d156ef30cfa40080b89ae03b
-    :git: https://gitlab.com/Malygos/ZCPKit.git
+  https://gitlab.com/Malygos/zcprepo.git:
+    - ZCPKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -109,8 +102,8 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  ZCPKit: 956f28fea90c184810a03b3707169fbd6239e5df
+  ZCPKit: 7851901c5c9818392b9f324f49532aa374990d45
 
-PODFILE CHECKSUM: 7b8d367d9334e93f375ad810d116101186e00619
+PODFILE CHECKSUM: 6026eb7d5e1cda90fb84cd057734c49f52a6a49b
 
 COCOAPODS: 1.5.3

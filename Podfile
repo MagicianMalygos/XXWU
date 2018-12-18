@@ -7,9 +7,8 @@ inhibit_all_warnings!
 target 'XXWU' do
 
 # zcp
-pod 'ZCPKit', :git => 'https://gitlab.com/Malygos/ZCPKit.git'
-# pod 'ZCPKit', :path => '~/Desktop/ZCPKit/'
-# pod 'ZCPKit', '~> 0.0.3'
+#pod 'ZCPKit', :git => 'https://gitlab.com/Malygos/ZCPKit.git'
+pod 'ZCPKit', '~> 0.0.1'
 # 网络请求
 pod 'AFNetworking', '~> 3.2.1'
 # 图片加载

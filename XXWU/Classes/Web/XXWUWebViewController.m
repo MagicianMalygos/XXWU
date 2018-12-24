@@ -128,25 +128,15 @@
 }
 
 - (void)helperCallbackCleanWebViewCache {
-    DebugLog(@"准备清除缓存....");
-    
-    // 清除cookies
-    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    DebugLog(@"正在清除%lu条cookies...", storage.cookies.count);
-    for (NSHTTPCookie *cookie in storage.cookies) {
-        DebugLog(@"cookie: %@", cookie);
-        [storage deleteCookie:cookie];
-    }
-    DebugLog(@"cookies清除完毕！！！");
-    
-    DebugLog(@"正在清除UIWebView缓存...");
-    // 清除UIWebView缓存
-    [[NSURLCache sharedURLCache] removeAllCachedResponses];
-    NSURLCache *cache = [NSURLCache sharedURLCache];
-    [cache removeAllCachedResponses];
-    [cache setDiskCapacity:0];
-    [cache setMemoryCapacity:0];
-    DebugLog(@"清除完毕！！！");
+    DebugLog(@"准备清除缓存...");
+    NSArray *types = @[WKWebsiteDataTypeMemoryCache, WKWebsiteDataTypeDiskCache];
+    NSSet *websiteDataTypes = [NSSet setWithArray:types];
+    NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
+    [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
+        DebugLog(@"缓存清除完毕！！！");
+        [ZCPToastUtil showToast:@"缓存已清除"];
+        [self loadUrl:self.urlString];
+    }];
 }
 
 #pragma mark - motion

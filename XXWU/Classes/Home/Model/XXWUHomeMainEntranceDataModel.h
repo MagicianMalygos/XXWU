@@ -10,22 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 首页主入口跳转类型
-
- - XXWUHomeMainEntranceJumpTypeNative: 本地跳转
- - XXWUHomeMainEntranceJumpTypeH5: H5跳转
- */
-typedef NS_ENUM(NSInteger, XXWUHomeMainEntranceJumpType) {
-    XXWUHomeMainEntranceJumpTypeNative = 1,
-    XXWUHomeMainEntranceJumpTypeH5 = 2
-};
-
 @interface XXWUHomeMainEntranceDataModel : ZCPTableViewCellDataModel
 
 @property (nonatomic, copy) NSString *text;
-@property (nonatomic, assign) XXWUHomeMainEntranceJumpType type;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *icon;
 
 @end
 

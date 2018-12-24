@@ -1,30 +1,47 @@
 //
-//  ViewController.m
+//  XXWUWebHelperViewController.m
 //  XXWU
 //
-//  Created by 朱超鹏 on 2017/8/23.
-//  Copyright © 2017年 zcp. All rights reserved.
+//  Created by zcp on 2018/12/24.
+//  Copyright © 2018 zcp. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "XXWUWebHelperViewController.h"
 
-@interface ViewController ()
+@interface XXWUWebHelperViewController ()
 
-@property (nonatomic, strong) UITextField *urlTextField;
+/// url输入框
+@property (nonatomic, strong) UITextField *urlInputView;
+/// 加载按钮
 @property (nonatomic, strong) UIButton *loadButton;
+/// 清空按钮
 @property (nonatomic, strong) UIButton *clearButton;
+/// url片段快捷输入工具容器视图
 @property (nonatomic, strong) UIView *toolContainer;
+/// 清理缓存按钮
+@property (nonatomic, strong) UIButton *cleanCacheButton;
 
 @end
 
-@implementation ViewController
+@implementation XXWUWebHelperViewController
+
+#pragma mark - life cycle
+
+- (instancetype)initWithQuery:(NSDictionary *)query {
+    if (self = [super init]) {
+        _defaultUrl = [query objectForKey:@"_defaultUrl"];
+        _delegate = [query objectForKey:@"_delegate"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:self.urlTextField];
+    [self.view addSubview:self.urlInputView];
     [self.view addSubview:self.loadButton];
     [self.view addSubview:self.clearButton];
+    [self.view addSubview:self.cleanCacheButton];
     [self.view addSubview:self.toolContainer];
     [self addToolButton];
 }
@@ -32,17 +49,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.urlTextField.text = self.defaultUrl;
+    self.view.backgroundColor   = [UIColor whiteColor];
+    self.urlInputView.text      = self.defaultUrl;
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    self.urlTextField.frame = CGRectMake(16, 64+16, self.view.width - 32, 50);
-    self.loadButton.frame = CGRectMake(16, self.urlTextField.bottom + 16, (self.view.width - 48) * 3/4, 50);
-    self.clearButton.frame = CGRectMake(self.loadButton.right + 16, self.urlTextField.bottom + 16, (self.view.width - 48) /4, 50);
-    self.toolContainer.frame = CGRectMake(16, self.loadButton.bottom + 16, self.view.width - 32, self.view.height - self.loadButton.bottom - 32);
+    self.urlInputView.frame     = CGRectMake(16, 16, self.view.width - 32, 50);
+    self.loadButton.frame       = CGRectMake(16, self.urlInputView.bottom + 16, (self.view.width - 48) * 3/4, 50);
+    self.clearButton.frame      = CGRectMake(self.loadButton.right + 16, self.urlInputView.bottom + 16, (self.view.width - 48) /4, 50);
+    self.cleanCacheButton.frame = CGRectMake(16, self.loadButton.bottom + 16, self.view.width - 32, 50);
+    self.toolContainer.frame    = CGRectMake(16, self.cleanCacheButton.bottom + 16, self.view.width - 32, self.view.height - self.cleanCacheButton.bottom - 32);
 }
 
 #pragma mark - private
@@ -84,18 +102,25 @@
 #pragma mark - event response
 
 - (void)clickLoad {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(generateUrl:)]) {
-        [self.delegate generateUrl:self.urlTextField.text];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(helperCallbackGenerateUrl:)]) {
+        [self.delegate helperCallbackGenerateUrl:self.urlInputView.text];
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)clickClear {
-    self.urlTextField.text = @"";
+    self.urlInputView.text = @"";
 }
 
 - (void)clickToolButton:(UIButton *)button {
-    self.urlTextField.text = [NSString stringWithFormat:@"%@%@", self.urlTextField.text, button.currentTitle];
+    self.urlInputView.text = [NSString stringWithFormat:@"%@%@", self.urlInputView.text, button.currentTitle];
+}
+
+- (void)clickCleanjCacheButton {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(helperCallbackCleanWebViewCache)]) {
+        [self.delegate helperCallbackCleanWebViewCache];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - override
@@ -106,15 +131,17 @@
 
 #pragma mark - getters and setter
 
-- (UITextField *)urlTextField {
-    if (!_urlTextField) {
-        _urlTextField                   = [[UITextField alloc] init];
-        _urlTextField.layer.borderColor = [UIColor blackColor].CGColor;
-        _urlTextField.layer.borderWidth = 1;
-        _urlTextField.font              = [UIFont systemFontOfSize:14.0f];
-        _urlTextField.placeholder       = @"请输入链接";
+- (UITextField *)urlInputView {
+    if (!_urlInputView) {
+        _urlInputView                   = [[UITextField alloc] init];
+        _urlInputView.layer.borderColor = [UIColor blackColor].CGColor;
+        _urlInputView.layer.borderWidth = 1;
+        _urlInputView.font              = [UIFont systemFontOfSize:14.0f];
+        _urlInputView.placeholder       = @"请输入链接";
+        _urlInputView.layer.cornerRadius = 8;
+        _urlInputView.layer.masksToBounds = YES;
     }
-    return _urlTextField;
+    return _urlInputView;
 }
 
 - (UIButton *)loadButton {
@@ -148,8 +175,23 @@
         _toolContainer = [[UIView alloc] init];
         _toolContainer.layer.borderColor = [UIColor blackColor].CGColor;
         _toolContainer.layer.borderWidth = 1;
+        _toolContainer.layer.cornerRadius = 8;
+        _toolContainer.layer.masksToBounds = YES;
     }
     return _toolContainer;
+}
+
+- (UIButton *)cleanCacheButton {
+    if (!_cleanCacheButton) {
+        _cleanCacheButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _cleanCacheButton.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+        _cleanCacheButton.backgroundColor = [UIColor orangeColor];
+        _cleanCacheButton.layer.cornerRadius = 8;
+        _cleanCacheButton.layer.masksToBounds = YES;
+        [_cleanCacheButton setTitle:@"清除缓存" forState:UIControlStateNormal];
+        [_cleanCacheButton addTarget:self action:@selector(clickCleanjCacheButton) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _cleanCacheButton;
 }
 
 @end

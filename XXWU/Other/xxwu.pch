@@ -12,6 +12,8 @@
 #import <ZCPKit.h>
 #import <AFNetworking.h>
 #import <YYModel.h>
+#import <Masonry.h>
+#import <UIImageView+WebCache.h>
 
 #import "XXWUViewMap.h"
 #import "ZCPControllerFactory+Category.h"

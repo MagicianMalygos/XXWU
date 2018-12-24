@@ -7,9 +7,9 @@
 //
 
 #import "XXWUWebViewController.h"
-#import "ViewController.h"
+#import "XXWUWebHelperViewController.h"
 
-@interface XXWUWebViewController () <WKNavigationDelegate, WKUIDelegate, ZCPGenerateURLDelegate>
+@interface XXWUWebViewController () <WKNavigationDelegate, WKUIDelegate, XXWUWebHelperDelegate>
 
 @end
 
@@ -19,20 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
     [self.view addSubview:self.webView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     [self setupNav];
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
     self.webView.frame = self.view.bounds;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.movingFromParentViewController) {
+        self.webView = nil;
+        self.webViewConfiguration = nil;
+    }
 }
 
 #pragma mark - setup
@@ -116,21 +121,41 @@
     completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
 }
 
-#pragma mark - ZCPGenerateURLDelegate
+#pragma mark - XXWUWebHelperDelegate
 
-- (void)generateUrl:(NSString *)url {
+- (void)helperCallbackGenerateUrl:(NSString *)url {
     [self loadUrl:url];
+}
+
+- (void)helperCallbackCleanWebViewCache {
+    DebugLog(@"准备清除缓存....");
+    
+    // 清除cookies
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    DebugLog(@"正在清除%lu条cookies...", storage.cookies.count);
+    for (NSHTTPCookie *cookie in storage.cookies) {
+        DebugLog(@"cookie: %@", cookie);
+        [storage deleteCookie:cookie];
+    }
+    DebugLog(@"cookies清除完毕！！！");
+    
+    DebugLog(@"正在清除UIWebView缓存...");
+    // 清除UIWebView缓存
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    NSURLCache *cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    [cache setDiskCapacity:0];
+    [cache setMemoryCapacity:0];
+    DebugLog(@"清除完毕！！！");
 }
 
 #pragma mark - motion
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     [super motionBegan:motion withEvent:event];
+    
     if ([[[XXWUSettingsManager sharedInstance].preference objectForKey:SETTINGID_SHAKE] boolValue]) {
-        ViewController *generator   = [[ViewController alloc] init];
-        generator.delegate          = self;
-        generator.defaultUrl        = self.urlString;
-        [self.navigationController pushViewController:generator animated:YES];
+        [[ZCPNavigator sharedInstance] gotoViewWithIdentifier:APPURL_VIEW_IDENTIFIER_WEBVIEW_HELPER queryForInit:@{@"_defaultUrl": self.urlString, @"_delegate": self} propertyDictionary:nil];
     }
 }
 

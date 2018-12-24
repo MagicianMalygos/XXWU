@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		05C359C4DF8B396996042BB0 /* libPods-XXWU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E630100AEBDF44B0D77239E /* libPods-XXWU.a */; };
+		653B098D21D08BFE00DBBCAF /* XXWUWebHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */; };
+		653B099021D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098F21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m */; };
+		653B099321D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B099221D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m */; };
+		653B099621D0C25500DBBCAF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 653B099521D0C25500DBBCAF /* iconfont.ttf */; };
 		65646FA021C752BB00F0F945 /* DebugConsoleLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8921C752BB00F0F945 /* DebugConsoleLogView.m */; };
 		65646FA121C752BB00F0F945 /* DebugStatusBallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65646F8A21C752BB00F0F945 /* DebugStatusBallView.xib */; };
 		65646FA221C752BB00F0F945 /* DebugStatusBallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */; };
 		65646FA321C752BB00F0F945 /* DebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F8D21C752BB00F0F945 /* DebugManager.m */; };
-		65646FA521C752BB00F0F945 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F9021C752BB00F0F945 /* ViewController.m */; };
 		65646FA721C752BB00F0F945 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65646F9421C752BB00F0F945 /* AppDelegate.m */; };
 		65646FA821C752BB00F0F945 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65646F9721C752BB00F0F945 /* Settings.bundle */; };
 		65646FA921C752BB00F0F945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65646F9921C752BB00F0F945 /* Assets.xcassets */; };
@@ -31,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		653B098B21D08BFD00DBBCAF /* XXWUWebHelperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUWebHelperViewController.h; sourceTree = "<group>"; };
+		653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUWebHelperViewController.m; sourceTree = "<group>"; };
+		653B098E21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeMainEntranceCell.h; sourceTree = "<group>"; };
+		653B098F21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUHomeMainEntranceCell.m; sourceTree = "<group>"; };
+		653B099121D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeMainEntranceView.h; sourceTree = "<group>"; };
+		653B099221D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUHomeMainEntranceView.m; sourceTree = "<group>"; };
+		653B099521D0C25500DBBCAF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		65646F8221C752BB00F0F945 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65646F8721C752BB00F0F945 /* DebugStatusBallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugStatusBallView.h; sourceTree = "<group>"; };
 		65646F8821C752BB00F0F945 /* DebugManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugManager.h; sourceTree = "<group>"; };
@@ -39,9 +49,7 @@
 		65646F8B21C752BB00F0F945 /* DebugStatusBallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugStatusBallView.m; sourceTree = "<group>"; };
 		65646F8C21C752BB00F0F945 /* DebugConsoleLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugConsoleLogView.h; sourceTree = "<group>"; };
 		65646F8D21C752BB00F0F945 /* DebugManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugManager.m; sourceTree = "<group>"; };
-		65646F9021C752BB00F0F945 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65646F9421C752BB00F0F945 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65646F9521C752BB00F0F945 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		65646F9721C752BB00F0F945 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		65646F9821C752BB00F0F945 /* xxwu.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xxwu.pch; sourceTree = "<group>"; };
 		65646F9921C752BB00F0F945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +111,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		653B099421D0C25500DBBCAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				653B099521D0C25500DBBCAF /* iconfont.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		65646F7F21C752BB00F0F945 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +130,6 @@
 				65646FED21C77C9000F0F945 /* Clock */,
 				65646F8221C752BB00F0F945 /* AppDelegate.h */,
 				65646F9421C752BB00F0F945 /* AppDelegate.m */,
-				65646F9521C752BB00F0F945 /* ViewController.h */,
-				65646F9021C752BB00F0F945 /* ViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,6 +163,7 @@
 		65646F9621C752BB00F0F945 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				653B099421D0C25500DBBCAF /* Resources */,
 				65646F9C21C752BB00F0F945 /* main.m */,
 				65646F9821C752BB00F0F945 /* xxwu.pch */,
 				65646F9A21C752BB00F0F945 /* LaunchScreen.storyboard */,
@@ -164,6 +179,8 @@
 			children = (
 				65646FC421C7633000F0F945 /* XXWUWebViewController.h */,
 				65646FC521C7633000F0F945 /* XXWUWebViewController.m */,
+				653B098B21D08BFD00DBBCAF /* XXWUWebHelperViewController.h */,
+				653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -182,6 +199,10 @@
 		65646FDC21C7692E00F0F945 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				653B098E21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.h */,
+				653B098F21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m */,
+				653B099121D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.h */,
+				653B099221D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,7 +315,7 @@
 				TargetAttributes = {
 					FB960D151F4D142C00D9E4D3 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -323,6 +344,7 @@
 			files = (
 				65646FA821C752BB00F0F945 /* Settings.bundle in Resources */,
 				6564700021C786B200F0F945 /* xxwuViewMap.plist in Resources */,
+				653B099621D0C25500DBBCAF /* iconfont.ttf in Resources */,
 				65646FAA21C752BB00F0F945 /* LaunchScreen.storyboard in Resources */,
 				65646FA921C752BB00F0F945 /* Assets.xcassets in Resources */,
 				65646FA121C752BB00F0F945 /* DebugStatusBallView.xib in Resources */,
@@ -384,11 +406,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65646FAB21C752BB00F0F945 /* main.m in Sources */,
+				653B098D21D08BFE00DBBCAF /* XXWUWebHelperViewController.m in Sources */,
 				6564700B21C7B32200F0F945 /* XXWUSettingsManager.m in Sources */,
-				65646FA521C752BB00F0F945 /* ViewController.m in Sources */,
 				6564700821C78DFD00F0F945 /* XXWULoginViewController.m in Sources */,
 				65646FEA21C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m in Sources */,
 				6564700321C786B200F0F945 /* ZCPServiceHandler+XXWU.m in Sources */,
+				653B099321D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m in Sources */,
 				65646FA721C752BB00F0F945 /* AppDelegate.m in Sources */,
 				65646FDB21C7634400F0F945 /* XXWUHomeViewController.m in Sources */,
 				65646FD321C7633000F0F945 /* XXWUWebViewController.m in Sources */,
@@ -398,6 +421,7 @@
 				65646FA321C752BB00F0F945 /* DebugManager.m in Sources */,
 				65646FF321C782E600F0F945 /* XXWUDebugViewController.m in Sources */,
 				65646FA021C752BB00F0F945 /* DebugConsoleLogView.m in Sources */,
+				653B099021D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,16 +554,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = UH86AS4452;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
 				GCC_PREFIX_HEADER = XXWU/Other/xxwu.pch;
 				INFOPLIST_FILE = XXWU/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.xxwu1258;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "455eb850-d499-4684-acea-69404b602537";
-				PROVISIONING_PROFILE_SPECIFIER = PAHFEnterprise_Common;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -551,13 +575,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WG5B567WWS;
 				GCC_PREFIX_HEADER = XXWU/Other/xxwu.pch;
 				INFOPLIST_FILE = XXWU/Other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.xxwu1258;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zcp.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "455eb850-d499-4684-acea-69404b602537";
 				PROVISIONING_PROFILE_SPECIFIER = "";

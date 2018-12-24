@@ -14,6 +14,8 @@
 
 // web页 XXWUWebViewController
 #define APPURL_VIEW_IDENTIFIER_WEBVIEW              @"webview"
+// web helper页 XXWUWebHelperViewController
+#define APPURL_VIEW_IDENTIFIER_WEBVIEW_HELPER       @"webviewHelper"
 
 // 闹钟页 XXWUClockViewController
 #define APPURL_VIEW_IDENTIFIER_CLOCK                @"clock"

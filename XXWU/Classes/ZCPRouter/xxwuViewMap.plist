@@ -34,5 +34,13 @@
 		<key>description</key>
 		<string>登录页</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>XXWUWebHelperViewController</string>
+		<key>identifier</key>
+		<string>webviewHelper</string>
+		<key>description</key>
+		<string>webview helper</string>
+	</dict>
 </array>
 </plist>

@@ -13,11 +13,13 @@ pod 'ZCPKit', '~> 0.0.1'
 pod 'AFNetworking', '~> 3.2.1'
 # 图片加载
 pod 'SDWebImage', '~> 4.1.0'
-# 查找内存泄漏
-pod 'MLeaksFinder', '~> 1.0.0'
 # 约束
 pod 'Masonry', '~> 1.1.0'
 # 数据模型转换
 pod 'YYModel', '~> 1.0.4'
+
+#Debug Tool
+# 查找内存泄漏
+pod 'MLeaksFinder', '~> 1.0.0', :configurations => ['Debug']
 
 end

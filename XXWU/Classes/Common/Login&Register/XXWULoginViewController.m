@@ -61,8 +61,8 @@
     [self.view addSubview:self.loginButton];
     
     // pro
-    self.tipLabel.text = @"请输入密码，密码将在后续的过程中被校验！";
-    [self.loginButton setTitle:@"进入" forState:UIControlStateNormal];
+    self.tipLabel.text = @"请输入口令，口令将在后续的过程中被校验！";
+    [self.loginButton setTitle:@"确认" forState:UIControlStateNormal];
     
     // event
     [self.loginButton addTarget:self action:@selector(clickLoginButton) forControlEvents:UIControlEventTouchUpInside];
@@ -75,7 +75,7 @@
     
     // judge
     if (!password || password.length == 0) {
-        [ZCPToastUtil showToast:@"请输入密码！"];
+        [ZCPToastUtil showToast:@"请输入口令！"];
         return;
     }
     
@@ -98,7 +98,7 @@
 - (UILabel *)tipLabel {
     if (!_tipLabel) {
         _tipLabel = [[UILabel alloc] init];
-        _tipLabel.font = [UIFont boldSystemFontOfSize:24.0f];
+        _tipLabel.font = [UIFont boldSystemFontOfSize:20.0f];
         _tipLabel.numberOfLines = 0;
     }
     return _tipLabel;
@@ -107,8 +107,8 @@
 - (UITextField *)passwordInputView {
     if (!_passwordInputView) {
         _passwordInputView = [[UITextField alloc] init];
-        _passwordInputView.placeholder = @"请输入登陆密码";
-        _passwordInputView.font = [UIFont boldSystemFontOfSize:24.0f];
+        _passwordInputView.placeholder = @"请输入口令";
+        _passwordInputView.font = [UIFont boldSystemFontOfSize:20.0f];
     }
     return _passwordInputView;
 }
@@ -118,7 +118,7 @@
         _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _loginButton.backgroundColor = [UIColor blueColor];
         _loginButton.layer.masksToBounds = YES;
-        _loginButton.titleLabel.font = [UIFont systemFontOfSize:24];
+        _loginButton.titleLabel.font = [UIFont systemFontOfSize:20];
     }
     return _loginButton;
 }

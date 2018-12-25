@@ -28,7 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.title = @"首页";
+    self.tabBarController.title = @"首页";
 }
 
 - (void)viewWillLayoutSubviews {

@@ -12,12 +12,12 @@
 
 @interface XXWUHomeViewController ()
 
+/// 首页主入口模型列表
 @property (nonatomic, strong) NSMutableArray *mainEntranceModelArr;
 
 @end
 
 @implementation XXWUHomeViewController
-
 
 #pragma mark - life cycle
 
@@ -112,7 +112,7 @@
     
     hexString = hexString.lowercaseString;
     int  length = (int)hexString.length;
-    unsigned int sum = 0;
+    unichar sum = 0;
     for (int i = length - 1; i >= 0; i--) {
         
         char c = (char)[hexString characterAtIndex:i];

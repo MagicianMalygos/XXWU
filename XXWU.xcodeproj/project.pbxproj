@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		05C359C4DF8B396996042BB0 /* libPods-XXWU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E630100AEBDF44B0D77239E /* libPods-XXWU.a */; };
+		650CF22C21DC983100E20261 /* FoldClockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF22B21DC983100E20261 /* FoldClockLabel.m */; };
+		650CF23421DC993800E20261 /* FoldClockItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23021DC993800E20261 /* FoldClockItemView.m */; };
+		650CF23521DC993800E20261 /* FoldClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23221DC993800E20261 /* FoldClockView.m */; };
+		650CF23821DCA52900E20261 /* XXWUClockPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23721DCA52900E20261 /* XXWUClockPicker.m */; };
 		653B098D21D08BFE00DBBCAF /* XXWUWebHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */; };
 		653B099021D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098F21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m */; };
 		653B099321D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B099221D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m */; };
@@ -36,6 +40,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650CF22A21DC983100E20261 /* FoldClockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldClockLabel.h; sourceTree = "<group>"; };
+		650CF22B21DC983100E20261 /* FoldClockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldClockLabel.m; sourceTree = "<group>"; };
+		650CF23021DC993800E20261 /* FoldClockItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldClockItemView.m; sourceTree = "<group>"; };
+		650CF23121DC993800E20261 /* FoldClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldClockView.h; sourceTree = "<group>"; };
+		650CF23221DC993800E20261 /* FoldClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldClockView.m; sourceTree = "<group>"; };
+		650CF23321DC993800E20261 /* FoldClockItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldClockItemView.h; sourceTree = "<group>"; };
+		650CF23621DCA52900E20261 /* XXWUClockPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUClockPicker.h; sourceTree = "<group>"; };
+		650CF23721DCA52900E20261 /* XXWUClockPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUClockPicker.m; sourceTree = "<group>"; };
 		653B098B21D08BFD00DBBCAF /* XXWUWebHelperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUWebHelperViewController.h; sourceTree = "<group>"; };
 		653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUWebHelperViewController.m; sourceTree = "<group>"; };
 		653B098E21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeMainEntranceCell.h; sourceTree = "<group>"; };
@@ -114,6 +126,21 @@
 				8E630100AEBDF44B0D77239E /* libPods-XXWU.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650CF22621DC949700E20261 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				650CF23121DC993800E20261 /* FoldClockView.h */,
+				650CF23221DC993800E20261 /* FoldClockView.m */,
+				650CF23321DC993800E20261 /* FoldClockItemView.h */,
+				650CF23021DC993800E20261 /* FoldClockItemView.m */,
+				650CF22A21DC983100E20261 /* FoldClockLabel.h */,
+				650CF22B21DC983100E20261 /* FoldClockLabel.m */,
+				650CF23621DCA52900E20261 /* XXWUClockPicker.h */,
+				650CF23721DCA52900E20261 /* XXWUClockPicker.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		653B099421D0C25500DBBCAF /* Resources */ = {
@@ -234,6 +261,7 @@
 		65646FED21C77C9000F0F945 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				650CF22621DC949700E20261 /* View */,
 				653B09A021D1CABE00DBBCAF /* Model */,
 				65646FEE21C77CAA00F0F945 /* XXWUClockViewController.h */,
 				65646FEF21C77CAA00F0F945 /* XXWUClockViewController.m */,
@@ -429,10 +457,14 @@
 				65646FEA21C7766300F0F945 /* XXWUHomeMainEntranceDataModel.m in Sources */,
 				6564700321C786B200F0F945 /* ZCPServiceHandler+XXWU.m in Sources */,
 				653B099321D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m in Sources */,
+				650CF22C21DC983100E20261 /* FoldClockLabel.m in Sources */,
 				65646FA721C752BB00F0F945 /* AppDelegate.m in Sources */,
+				650CF23421DC993800E20261 /* FoldClockItemView.m in Sources */,
 				65646FDB21C7634400F0F945 /* XXWUHomeViewController.m in Sources */,
 				653B09A321D1D77B00DBBCAF /* XXWUBaseDelegate.m in Sources */,
+				650CF23821DCA52900E20261 /* XXWUClockPicker.m in Sources */,
 				65646FD321C7633000F0F945 /* XXWUWebViewController.m in Sources */,
+				650CF23521DC993800E20261 /* FoldClockView.m in Sources */,
 				6564700221C786B200F0F945 /* ZCPControllerFactory+Category.m in Sources */,
 				65646FA221C752BB00F0F945 /* DebugStatusBallView.m in Sources */,
 				653B099921D0E21800DBBCAF /* XXWULocalNotificationManager.m in Sources */,

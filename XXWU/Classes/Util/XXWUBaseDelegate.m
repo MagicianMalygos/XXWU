@@ -91,4 +91,70 @@
     [[XXWULocalNotificationManager defaultManager] application:application didReceiveLocalNotification:notification];
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    UIViewController *rootVC = window.rootViewController;
+    if ([rootVC isKindOfClass:[ZCPNavigationController class]]) {
+        ZCPNavigationController *nav = (ZCPNavigationController *)rootVC;
+        UIViewController *topVC = nav.topViewController;
+        
+        if ([topVC shouldAutorotate]) {
+            return [topVC supportedInterfaceOrientations];
+        }
+    }
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+@end
+
+
+
+
+
+
+@interface ZCPViewController (Orientation)
+
+@end
+
+@implementation ZCPViewController (Orientation)
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+@end
+
+@interface ZCPNavigationController (Orientation)
+
+@end
+
+@implementation ZCPNavigationController (Orientation)
+
+- (BOOL)shouldAutorotate {
+    return [self.topViewController shouldAutorotate];
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return [self.topViewController supportedInterfaceOrientations];
+}
+
+@end
+
+@interface ZCPTabBarController (Orientation)
+
+@end
+
+@implementation ZCPTabBarController (Orientation)
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end

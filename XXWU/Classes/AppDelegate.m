@@ -90,6 +90,14 @@
     }
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    UIInterfaceOrientationMask mask = [self.basicDelegate application:application supportedInterfaceOrientationsForWindow:window];
+    for (id<UIApplicationDelegate> delegate in self.eventQueues) {
+        [delegate application:application supportedInterfaceOrientationsForWindow:window];
+    }
+    return mask;
+}
+
 #pragma mark - getters and setters
 
 - (NSArray<id<UIApplicationDelegate>> *)eventQueues {

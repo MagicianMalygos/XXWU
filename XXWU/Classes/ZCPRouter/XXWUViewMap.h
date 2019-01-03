@@ -19,8 +19,10 @@
 
 // 闹钟页 XXWUClockViewController
 #define APPURL_VIEW_IDENTIFIER_CLOCK                @"clock"
+// 闹钟辅助页 XXWUClockHelperViewController
+#define APPURL_VIEW_IDENTIFIER_CLOCK_HELPER         @"clockHelper"
 
-// 闹钟页 XXWULoginViewController
+// 登陆页 XXWULoginViewController
 #define APPURL_VIEW_IDENTIFIER_LOGIN                @"login"
 
 #endif /* XXWUViewMap_h */

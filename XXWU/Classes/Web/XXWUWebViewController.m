@@ -144,7 +144,7 @@
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     [super motionBegan:motion withEvent:event];
     
-    if ([[[XXWUSettingsManager sharedInstance].preference objectForKey:SETTINGID_SHAKE] boolValue]) {
+    if ([[XXWUSettingsManager sharedInstance] isOpenShake]) {
         [[ZCPNavigator sharedInstance] gotoViewWithIdentifier:APPURL_VIEW_IDENTIFIER_WEBVIEW_HELPER queryForInit:@{@"_defaultUrl": self.urlString, @"_delegate": self} propertyDictionary:nil];
     }
 }

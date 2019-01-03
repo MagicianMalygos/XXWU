@@ -9,9 +9,9 @@
 #import "XXWUSettingsManager.h"
 
 // setting key
-NSString * const HAS_BEEN_LAUNCHED      = @"has_been_launched";
-NSString * const SETTINGID_SHAKE        = @"settingsid_shake";
-NSString * const SETTINGID_DEBUGTOOL    = @"settingsid_debugtool";
+NSString * const kIsFirstLaunchAppKey   = @"is_first_launch_app";
+NSString * const kSettingShakeKey       = @"setting_shake";
+NSString * const kSettingDebugToolKey   = @"setting_debug_tool";
 
 @implementation XXWUSettingsManager
 
@@ -36,29 +36,29 @@ IMP_SINGLETON
 }
 
 - (void)readPreference {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSNumber *debug = @([[userDefaults objectForKey:SETTINGID_DEBUGTOOL] boolValue]);
-    NSNumber *shake = @([[userDefaults objectForKey:SETTINGID_SHAKE] boolValue]);
-    
-    _preference = @{SETTINGID_DEBUGTOOL: debug,
-                    SETTINGID_SHAKE: shake};
+    NSNumber *debug = @([ReadUserDefaults(kSettingDebugToolKey) boolValue]);
+    NSNumber *shake = @([ReadUserDefaults(kSettingShakeKey) boolValue]);
+    _preference = @{kSettingDebugToolKey: debug,
+                    kSettingShakeKey: shake};
 }
 
 - (BOOL)isFirstOpenApp {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    return ![[defaults objectForKey:HAS_BEEN_LAUNCHED] boolValue];
+    return ![ReadUserDefaults(kIsFirstLaunchAppKey) boolValue];
 }
 
-- (void)setHasBeenLaunched {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![[defaults objectForKey:HAS_BEEN_LAUNCHED] boolValue]) {
-        [defaults setObject:@YES forKey:HAS_BEEN_LAUNCHED];
-        [defaults synchronize];
+- (void)setHasBeenLaunchedApp {
+    if ([self isFirstOpenApp]) {
+        SaveUserDefaults(@YES, kIsFirstLaunchAppKey);
+        UserDefaultsSync();
     }
 }
 
 - (BOOL)isOpenDebugger {
-    return [[[XXWUSettingsManager sharedInstance].preference objectForKey:SETTINGID_DEBUGTOOL] boolValue];
+    return [[[XXWUSettingsManager sharedInstance].preference objectForKey:kSettingDebugToolKey] boolValue];
+}
+
+- (BOOL)isOpenShake {
+    return [[[XXWUSettingsManager sharedInstance].preference objectForKey:kSettingShakeKey] boolValue];
 }
 
 #pragma mark - getters and setters

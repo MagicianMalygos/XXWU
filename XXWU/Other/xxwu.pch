@@ -19,6 +19,7 @@
 #import "ZCPControllerFactory+Category.h"
 #import "XXWUSettingsManager.h"
 #import "DebugManager.h"
+#import "XXWUUserDefaultsTool.h"
 
 static inline CGFloat CGPointGetDistanceToPoint(CGPoint p1, CGPoint p2) {
     return sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));

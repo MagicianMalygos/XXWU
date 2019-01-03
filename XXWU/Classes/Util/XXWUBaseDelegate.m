@@ -8,6 +8,7 @@
 
 #import "XXWUBaseDelegate.h"
 #import "XXWULocalNotificationManager.h"
+#import <objc/runtime.h>
 
 @implementation XXWUBaseDelegate
 
@@ -20,6 +21,7 @@
     
     // initialize
     [ZCPURLHelper setAppURLScheme:@"xxwu"];
+    [XXWUUserDefaultsTool initialize];
     
     // view map
     [ZCPNavigator readViewControllerMapWithViewMapNamed:@"xxwuViewMap"];
@@ -35,7 +37,6 @@
     [[XXWUSettingsManager sharedInstance] setup];
     [[XXWUSettingsManager sharedInstance] readPreference];
     [DebugManager defaultManager].alwaysShowStatusBall = [[XXWUSettingsManager sharedInstance] isOpenDebugger];
-    [[XXWUSettingsManager sharedInstance] setHasBeenLaunched];
     
     // register local notification
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
@@ -47,6 +48,9 @@
     if (localNotification) {
         [[XXWULocalNotificationManager defaultManager] application:application didReceiveLocalNotification:localNotification];
     }
+    
+    // 更新app启动状态
+    [[XXWUSettingsManager sharedInstance] setHasBeenLaunchedApp];
     return YES;
 }
 

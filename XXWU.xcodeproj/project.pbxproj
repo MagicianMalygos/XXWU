@@ -12,6 +12,9 @@
 		650CF23421DC993800E20261 /* FoldClockItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23021DC993800E20261 /* FoldClockItemView.m */; };
 		650CF23521DC993800E20261 /* FoldClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23221DC993800E20261 /* FoldClockView.m */; };
 		650CF23821DCA52900E20261 /* XXWUClockPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23721DCA52900E20261 /* XXWUClockPicker.m */; };
+		650CF23D21DCD8CA00E20261 /* XXWUClockQuickToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF23C21DCD8CA00E20261 /* XXWUClockQuickToolView.m */; };
+		650CF24221DCE4C400E20261 /* XXWUClockHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF24121DCE4C400E20261 /* XXWUClockHelperViewController.m */; };
+		650CF24521DDFA0E00E20261 /* XXWUUserDefaultsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 650CF24421DDFA0E00E20261 /* XXWUUserDefaultsTool.m */; };
 		653B098D21D08BFE00DBBCAF /* XXWUWebHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */; };
 		653B099021D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B098F21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.m */; };
 		653B099321D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 653B099221D0AF8E00DBBCAF /* XXWUHomeMainEntranceView.m */; };
@@ -48,6 +51,12 @@
 		650CF23321DC993800E20261 /* FoldClockItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldClockItemView.h; sourceTree = "<group>"; };
 		650CF23621DCA52900E20261 /* XXWUClockPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUClockPicker.h; sourceTree = "<group>"; };
 		650CF23721DCA52900E20261 /* XXWUClockPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUClockPicker.m; sourceTree = "<group>"; };
+		650CF23B21DCD8CA00E20261 /* XXWUClockQuickToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUClockQuickToolView.h; sourceTree = "<group>"; };
+		650CF23C21DCD8CA00E20261 /* XXWUClockQuickToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUClockQuickToolView.m; sourceTree = "<group>"; };
+		650CF24021DCE4C400E20261 /* XXWUClockHelperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUClockHelperViewController.h; sourceTree = "<group>"; };
+		650CF24121DCE4C400E20261 /* XXWUClockHelperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUClockHelperViewController.m; sourceTree = "<group>"; };
+		650CF24321DDFA0E00E20261 /* XXWUUserDefaultsTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUUserDefaultsTool.h; sourceTree = "<group>"; };
+		650CF24421DDFA0E00E20261 /* XXWUUserDefaultsTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUUserDefaultsTool.m; sourceTree = "<group>"; };
 		653B098B21D08BFD00DBBCAF /* XXWUWebHelperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUWebHelperViewController.h; sourceTree = "<group>"; };
 		653B098C21D08BFD00DBBCAF /* XXWUWebHelperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXWUWebHelperViewController.m; sourceTree = "<group>"; };
 		653B098E21D0AF5A00DBBCAF /* XXWUHomeMainEntranceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXWUHomeMainEntranceCell.h; sourceTree = "<group>"; };
@@ -139,6 +148,8 @@
 				650CF22B21DC983100E20261 /* FoldClockLabel.m */,
 				650CF23621DCA52900E20261 /* XXWUClockPicker.h */,
 				650CF23721DCA52900E20261 /* XXWUClockPicker.m */,
+				650CF23B21DCD8CA00E20261 /* XXWUClockQuickToolView.h */,
+				650CF23C21DCD8CA00E20261 /* XXWUClockQuickToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,13 +161,6 @@
 				653B099521D0C25500DBBCAF /* iconfont.ttf */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		653B09A021D1CABE00DBBCAF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		65646F7F21C752BB00F0F945 /* Classes */ = {
@@ -184,6 +188,8 @@
 				653B099821D0E21800DBBCAF /* XXWULocalNotificationManager.m */,
 				653B09A121D1D77B00DBBCAF /* XXWUBaseDelegate.h */,
 				653B09A221D1D77B00DBBCAF /* XXWUBaseDelegate.m */,
+				650CF24321DDFA0E00E20261 /* XXWUUserDefaultsTool.h */,
+				650CF24421DDFA0E00E20261 /* XXWUUserDefaultsTool.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -262,9 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				650CF22621DC949700E20261 /* View */,
-				653B09A021D1CABE00DBBCAF /* Model */,
 				65646FEE21C77CAA00F0F945 /* XXWUClockViewController.h */,
 				65646FEF21C77CAA00F0F945 /* XXWUClockViewController.m */,
+				650CF24021DCE4C400E20261 /* XXWUClockHelperViewController.h */,
+				650CF24121DCE4C400E20261 /* XXWUClockHelperViewController.m */,
 			);
 			path = Clock;
 			sourceTree = "<group>";
@@ -450,7 +457,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650CF24521DDFA0E00E20261 /* XXWUUserDefaultsTool.m in Sources */,
 				65646FAB21C752BB00F0F945 /* main.m in Sources */,
+				650CF23D21DCD8CA00E20261 /* XXWUClockQuickToolView.m in Sources */,
 				653B098D21D08BFE00DBBCAF /* XXWUWebHelperViewController.m in Sources */,
 				6564700B21C7B32200F0F945 /* XXWUSettingsManager.m in Sources */,
 				6564700821C78DFD00F0F945 /* XXWULoginViewController.m in Sources */,
@@ -466,6 +475,7 @@
 				65646FD321C7633000F0F945 /* XXWUWebViewController.m in Sources */,
 				650CF23521DC993800E20261 /* FoldClockView.m in Sources */,
 				6564700221C786B200F0F945 /* ZCPControllerFactory+Category.m in Sources */,
+				650CF24221DCE4C400E20261 /* XXWUClockHelperViewController.m in Sources */,
 				65646FA221C752BB00F0F945 /* DebugStatusBallView.m in Sources */,
 				653B099921D0E21800DBBCAF /* XXWULocalNotificationManager.m in Sources */,
 				65646FF021C77CAA00F0F945 /* XXWUClockViewController.m in Sources */,

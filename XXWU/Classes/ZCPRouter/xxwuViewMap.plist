@@ -42,5 +42,13 @@
 		<key>description</key>
 		<string>webview helper</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>XXWUClockHelperViewController</string>
+		<key>identifier</key>
+		<string>clockHelper</string>
+		<key>description</key>
+		<string>闹钟辅助页</string>
+	</dict>
 </array>
 </plist>

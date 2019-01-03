@@ -18,7 +18,7 @@
 			<key>Title</key>
 			<string>摇一摇</string>
 			<key>Key</key>
-			<string>settingsid_shake</string>
+			<string>setting_shake</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
@@ -28,7 +28,7 @@
 			<key>Title</key>
 			<string>调试工具</string>
 			<key>Key</key>
-			<string>settingsid_debugtool</string>
+			<string>setting_debug_tool</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>

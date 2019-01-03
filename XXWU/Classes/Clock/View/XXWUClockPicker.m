@@ -10,7 +10,7 @@
 
 @interface XXWUClockPicker () <UIPickerViewDataSource, UIPickerViewDelegate>
 
-
+// 数据源
 @property (nonatomic, strong) NSArray <NSArray *>*componentArr;
 @property (nonatomic, strong) NSArray *hourDataSource;
 @property (nonatomic, strong) NSArray *minuteDataSource;

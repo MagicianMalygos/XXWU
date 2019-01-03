@@ -9,11 +9,17 @@
 #import "XXWUClockViewController.h"
 #import "FoldClockView.h"
 #import "XXWUClockPicker.h"
+#import "XXWUClockQuickToolView.h"
 
+/// 时间格式
 static NSString * const XXWUClockDateFormat = @"HH:mm:ss";
+/// 本地通知名key
 static NSString * const kLocalNotificationNameKey = @"kLocalNotificationName";
+/// 闹钟本地通知名value
 static NSString * const kClockNotificationName = @"kClockNotification";
+/// 倒计时缓存key
 static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
+
 
 @interface XXWUClockViewController () <UITextFieldDelegate>
 
@@ -25,6 +31,8 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
 @property (nonatomic, strong) UIButton *startButton;
 /// 停止按钮
 @property (nonatomic, strong) UIButton *stopButton;
+/// 快捷工具视图
+@property (nonatomic, strong) XXWUClockQuickToolView *toolView;
 
 /// 计时器
 @property (nonatomic, strong) NSTimer *timer;
@@ -45,16 +53,7 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    
-    NSDate *date = [self getCacheCountdownDate];
-    
-    NSTimeInterval countdown = [date timeIntervalSinceDate:[NSDate date]];
-    if (countdown > 0) {
-        self.active = YES;
-        self.countdown = countdown;
-        [self updateCountdownViewWithCountdown:self.countdown];
-        [self startCountdown];
-    }
+    [self setupData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -70,25 +69,6 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
     }
 }
 
-- (void)setupUI {
-    [self.view addSubview:self.countdownView];
-    [self.view addSubview:self.startButton];
-    [self.view addSubview:self.stopButton];
-    
-    @weakify(self);
-    self.pickerView.confirmBlock = ^(NSInteger hour, NSInteger minute, NSInteger second) {
-        @strongify(self);
-        NSString *dateStr = [NSString stringWithFormat:@"%.2li:%.2li:%.2li", hour, minute, second];
-        NSDate *date = [NSDate dateFromString:dateStr withDateFormat:XXWUClockDateFormat];
-        self.countdown = hour * 3600 + minute * 60 + second;
-        self.currentTime = date;
-        [self.countdownView setDate:date animated:NO];
-    };
-    [self.countdownView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapCountDownView)]];
-    [self.startButton addTarget:self action:@selector(clickStartButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.stopButton addTarget:self action:@selector(clickStopButton) forControlEvents:UIControlEventTouchUpInside];
-}
-
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.inputView.frame = CGRectMake(0, 200, self.view.width, 50);
@@ -97,6 +77,52 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
     self.stopButton.frame = CGRectMake(self.view.width - 120, self.countdownView.bottom + 40, 80, 80);
     self.startButton.layer.cornerRadius = 40;
     self.stopButton.layer.cornerRadius = 40;
+    CGFloat toolViewHeight = [self.toolView sizeThatFits:CGSizeZero].height;
+    self.toolView.frame = CGRectMake(0, self.view.height - toolViewHeight, self.view.width, toolViewHeight);
+}
+
+#pragma mark - setup
+
+- (void)setupUI {
+    // add sbuviews
+    [self.view addSubview:self.countdownView];
+    [self.view addSubview:self.startButton];
+    [self.view addSubview:self.stopButton];
+    [self.view addSubview:self.toolView];
+    
+    // bind callback
+    @weakify(self);
+    void(^block)(NSInteger hour, NSInteger minute, NSInteger second) = ^(NSInteger hour, NSInteger minute, NSInteger second) {
+        @strongify(self);
+        if (self.isActive) {
+            return;
+        }
+        NSString *dateStr = [NSString stringWithFormat:@"%.2li:%.2li:%.2li", hour, minute, second];
+        NSDate *date = [NSDate dateFromString:dateStr withDateFormat:XXWUClockDateFormat];
+        self.countdown = hour * 3600 + minute * 60 + second;
+        self.currentTime = date;
+        [self.countdownView setDate:date animated:YES];
+    };
+    self.pickerView.confirmBlock = block;
+    self.toolView.responseBlock = block;
+    
+    // bind event
+    [self.countdownView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapCountDownView)]];
+    [self.startButton addTarget:self action:@selector(clickStartButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.stopButton addTarget:self action:@selector(clickStopButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)setupData {
+    NSDate *date = [self getCacheCountdownDate];
+    NSTimeInterval countdown = [date timeIntervalSinceDate:[NSDate date]];
+    if (countdown > 0) {
+        self.active = YES;
+        self.countdown = countdown;
+        [self updateCountdownViewWithCountdown:self.countdown];
+        [self startCountdown];
+    }
+    [self.toolView update];
+    [self.view setNeedsLayout];
 }
 
 #pragma mark - private
@@ -106,10 +132,11 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     if (notification) {
+        NSDictionary *alertInfo = ReadUserDefaults(kClockLocationAlertKey);
         notification.fireDate = date;
         notification.timeZone = [NSTimeZone defaultTimeZone];
-        notification.alertTitle = @"⚠️警告⚠️";
-        notification.alertBody = @"手机即将爆炸💥";
+        notification.alertTitle = alertInfo[@"title"];
+        notification.alertBody = alertInfo[@"body"];
         notification.soundName = @"voice.mp3";
         NSDictionary *infoDict = @{kLocalNotificationNameKey: kClockNotificationName};
         notification.userInfo = infoDict;
@@ -129,34 +156,35 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
 }
 
 - (void)startCountdown {
+    self.active = YES;
     [self updateTime];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
 }
 
 - (void)stopCountdown {
+    self.active = NO;
     [self.timer invalidate];
     self.timer = nil;
     self.currentTime = [NSDate dateFromString:@"00:00:00" withDateFormat:XXWUClockDateFormat];
-    [self.countdownView setDate:self.currentTime animated:NO];
+    [self.countdownView setDate:self.currentTime animated:YES];
 }
 
 - (NSDate *)getCacheCountdownDate {
-    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:kCacheCountdownDateKey];
-    
-    if ([[NSDate date] compare:date] == NSOrderedDescending) {
-        return nil;
+    NSDate *date = ReadUserDefaults(kCacheCountdownDateKey);
+    if (date && [date isKindOfClass:[NSDate class]] && [[NSDate date] compare:date] == NSOrderedAscending) {
+        return date;
     }
-    return date;
+    return nil;
 }
 
 - (void)cacheCountdownDate:(NSDate *)date {
-    [[NSUserDefaults standardUserDefaults] setObject:date forKey:kCacheCountdownDateKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    SaveUserDefaults(date, kCacheCountdownDateKey);
+    UserDefaultsSync();
 }
 
 - (void)cleanCountdownDate {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kCacheCountdownDateKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    RemoveUserDefaults(kCacheCountdownDateKey);
+    UserDefaultsSync();
 }
 
 - (void)updateCountdownViewWithCountdown:(NSInteger)countdown {
@@ -203,6 +231,21 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
     [self updateCountdownViewWithCountdown:self.countdown];
 }
 
+#pragma mark - motion
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    [super motionBegan:motion withEvent:event];
+    
+    @weakify(self);
+    dispatch_block_t block = ^(void) {
+        [weakself.toolView update];
+    };
+    
+    if ([[XXWUSettingsManager sharedInstance] isOpenShake]) {
+        [[ZCPNavigator sharedInstance] gotoViewWithIdentifier:APPURL_VIEW_IDENTIFIER_CLOCK_HELPER queryForInit:@{@"_callback": block} propertyDictionary:nil];
+    }
+}
+
 #pragma mark - getters and setters
 
 - (XXWUClockPicker *)pickerView {
@@ -240,6 +283,15 @@ static NSString * const kCacheCountdownDateKey = @"kCacheCountdownDateKey";
         _stopButton = button;
     }
     return _stopButton;
+}
+
+- (XXWUClockQuickToolView *)toolView {
+    if (!_toolView) {
+        _toolView = [[XXWUClockQuickToolView alloc] init];
+        _toolView.layer.borderColor = [UIColor colorFromHexRGB:@"dfdfdf"].CGColor;
+        _toolView.layer.borderWidth = 1;
+    }
+    return _toolView;
 }
 
 @end

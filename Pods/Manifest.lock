@@ -15,13 +15,10 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - FBRetainCycleDetector (0.1.4)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
   - Masonry (1.1.0)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
@@ -75,7 +72,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - Masonry (~> 1.1.0)
-  - MLeaksFinder (~> 1.0.0)
   - SDWebImage (~> 4.1.0)
   - YYModel (~> 1.0.4)
   - ZCPKit (~> 0.0.1)
@@ -84,10 +80,8 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Aspects
-    - FBRetainCycleDetector
     - MagicalRecord
     - Masonry
-    - MLeaksFinder
     - SDWebImage
     - YYModel
   https://gitlab.com/Malygos/zcprepo.git:
@@ -96,14 +90,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZCPKit: 7851901c5c9818392b9f324f49532aa374990d45
 
-PODFILE CHECKSUM: 8087404c7ebd6d7188a2b35db261ccef9770f851
+PODFILE CHECKSUM: ffa0359db2e945bcf0b501ce64bc7c0cedb3887c
 
 COCOAPODS: 1.5.3

@@ -20,6 +20,6 @@ pod 'YYModel', '~> 1.0.4'
 
 #Debug Tool
 # 查找内存泄漏
-pod 'MLeaksFinder', '~> 1.0.0', :configurations => ['Debug']
+#pod 'MLeaksFinder', '~> 1.0.0', :configurations => ['Debug']
 
 end
